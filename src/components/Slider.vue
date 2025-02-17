@@ -1,7 +1,16 @@
 <script setup>
  import { useSlider } from '@/composables/useSlider';
+ import { defineProps } from 'vue';
 
  const { prevSlide, nextSlide } = useSlider();
+
+ // Definisci le props
+ const props = defineProps({
+    slides: {
+        type: Array,
+        required: true
+    }
+ });
 </script>
 
 
@@ -9,9 +18,9 @@
     <section class="slider">
         <div class="slide">
             <div class="slides">
-                <div class="box img_1"></div>
-                <div class="box img_2"></div>
-                <div class="box img_3"></div>
+                <div v-for="(slide, index) in props.slides" :key="index" class="box" :class="slide.class">
+                    <img :src="slide.src" :alt="slide.alt" />
+                </div>
             </div>
         </div>
         <button class="prev" @click="prevSlide"><i class="fa-solid fa-chevron-left"></i></button>
