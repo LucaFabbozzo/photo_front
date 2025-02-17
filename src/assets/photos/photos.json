@@ -1,17 +1,17 @@
 {
     "work1": [
-        "work1/photo1.jpg",
-        "work1/photo2.jpg",
-        "work1/photo3.jpg"  
+        "work1/work1_photo1.jpg",
+        "work1/work1_photo2.jpg",
+        "work1/work1_photo3.jpg"
     ],
     "work2": [
-        "work1/photo1.jpg",
-        "work1/photo2.jpg",
-        "work1/photo3.jpg"  
+        "work2/work2_photo1.jpg",
+        "work2/work2_photo2.jpg",
+        "work2/work2_photo3.jpg"
     ],
     "work3": [
-        "work1/photo1.jpg",
-        "work1/photo2.jpg",
-        "work1/photo3.jpg"  
+        "work3/work3_photo1.jpg",
+        "work3/work3_photo2.jpg",
+        "work3/work3_photo3.jpg"
     ]
 }

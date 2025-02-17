@@ -1,12 +1,15 @@
 <script setup>
 import Footer from '@/components/Footer.vue';
 import Cards from '@/components/Cards.vue';
+import photos from '@/assets/photos/photos.json';
+
+const work2Photos = photos.work2;
 </script>
 
 <template>
     <div class="container-works">
         <h2>Works2</h2>
-        <Cards :photos="['work2_photo1.jpg', 'work2_photo2.jpg', 'work2_photo3.jpg']"/>
+        <Cards :photos="work2Photos"/>
     </div>
     <Footer />
 </template>
