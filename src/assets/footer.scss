@@ -1,0 +1,19 @@
+footer {
+    color: #100f0f;
+    width: 100%;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    .icons {
+        margin-bottom: 10px;
+        a {
+            color: #74c342;
+            font-size: 25px;
+            i {
+                margin: 8px;
+            }
+        }
+    }
+}

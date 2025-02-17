@@ -1,0 +1,17 @@
+{
+    "work1": [
+        "work1/photo1.jpg",
+        "work1/photo2.jpg",
+        "work1/photo3.jpg"  
+    ],
+    "work2": [
+        "work1/photo1.jpg",
+        "work1/photo2.jpg",
+        "work1/photo3.jpg"  
+    ],
+    "work3": [
+        "work1/photo1.jpg",
+        "work1/photo2.jpg",
+        "work1/photo3.jpg"  
+    ]
+}
