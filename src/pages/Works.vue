@@ -1,18 +1,18 @@
 <script setup>
 
-    import Slider from '@/components/Slider.vue';
-    import Footer from '@/components/Footer.vue';
+import Slider from '@/components/Slider.vue';
+import Footer from '@/components/Footer.vue';
 
-        // Importa le immagini
-    import img1 from '@/assets/photos/slide_works/slide_works_1.jpg';
-    import img2 from '@/assets/photos/slide_works/slide_works_2.jpg';
-    import img3 from '@/assets/photos/slide_works/slide_works_3.jpg';
+    // Importa le immagini
+import img1 from '@/assets/photos/slide_works/slide_works_1.jpg';
+import img2 from '@/assets/photos/slide_works/slide_works_2.jpg';
+import img3 from '@/assets/photos/slide_works/slide_works_3.jpg';
 
     // Creo un'array di oggetti per la slide
 const slides = [
-  { class: 'img_1', src: img1, link: 'works/1', name: 'First'},
-  { class: 'img_2', src: img2, link: 'works/2', name: 'Second'},
-  { class: 'img_3', src: img3, link: 'works/3', name: 'Third'}
+{ class: 'img_1', src: img1, link: 'works/1', name: 'First'},
+{ class: 'img_2', src: img2, link: 'works/2', name: 'Second'},
+{ class: 'img_3', src: img3, link: 'works/3', name: 'Third'}
 ];
 </script>
 
