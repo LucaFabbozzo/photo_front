@@ -20,6 +20,7 @@
             <div class="slides">
                 <div v-for="(slide, index) in props.slides" :key="index" class="box" :class="slide.class">
                     <img :src="slide.src" :alt="slide.alt" />
+                    <router-link :to="slide.link">{{ slide.name }}</router-link>
                 </div>
             </div>
         </div>
