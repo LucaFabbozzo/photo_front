@@ -12,7 +12,7 @@ const props = defineProps({
 <template>
     <div class="card-container">
         <div class="card" v-for="(photo, index) in photos" :key="index">
-            <img :src="photo" alt="Photo">
+            <img :src="`/src/assets/photos/works/${photo}`" alt="Photo">
         </div>
     </div>
 </template>
@@ -27,8 +27,8 @@ const props = defineProps({
 
 .card {
     flex: 0 0 auto;
-    width: 300px;
-    margin-right: 16px;
+    width: 80%;
+    margin-right: 10px;
     scroll-snap-align: start;
 }
 
