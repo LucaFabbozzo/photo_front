@@ -23,6 +23,7 @@ const props = defineProps({
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
+    scroll-behavior: auto;
 }
 
 .card {
