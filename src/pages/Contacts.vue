@@ -22,10 +22,10 @@ const sendEmail = (e) => {
 
 
 <template>
+
     <body>
-        <section>s
+        <section>
             <form @submit="sendEmail">
-                <input type="hidden" name="contact_number" value="697483">
                 <label>Name</label>
                 <input type="text" name="user_name">
                 <label>Email</label>
@@ -50,6 +50,8 @@ body {
 }
 
 form {
+    display: flex;
+    flex-direction: column;
     padding: 30px 70px 30px 221px;
 
     label {
@@ -65,6 +67,17 @@ form {
         margin-bottom: 20px;
         border: 1px solid rgba(219, 216, 216, 0.74);
         border-radius: 5px;
+    }
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
     }
 }
 </style>
