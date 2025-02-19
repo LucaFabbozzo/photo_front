@@ -1,20 +1,38 @@
 <script setup>
 import Footer from '@/components/Footer.vue';
+import emailjs from 'emailjs-com';
+
+const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        e.target,
+        import.meta.env.VITE_EMAILJS_USER_ID)
+        .then((result) => {
+            console.log(result.text);
+            alert('Email inviata con successo!');
+        }, (error) => {
+            console.log(error.text);
+            alert('Errore nell\'invio dell\'email.');
+        });
+};
+
 </script>
 
 
 <template>
     <body>
-        <section>
-            <form action="/action_page.php">
-                <label for="fname">First name*</label><br>
-                <input type="text" id="fname" name="fname" value="John"><br>
-                <label for="lname">Last name*</label><br>
-                <input type="text" id="lname" name="lname" value="Doe"><br>
-                <label for="email">Email*</label><br>
-                <input type="email" id="email" name="email" value="johndoe@gmail.com"><br>
-                <textarea name="message" id="message" rows="5">Write your message...</textarea><br>
-                <input type="submit" value="Submit">
+        <section>s
+            <form @submit="sendEmail">
+                <input type="hidden" name="contact_number" value="697483">
+                <label>Name</label>
+                <input type="text" name="user_name">
+                <label>Email</label>
+                <input type="email" name="user_email">
+                <label>Message</label>
+                <textarea name="message"></textarea>
+                <input type="submit" value="Send">
             </form>
         </section>
         <Footer />
