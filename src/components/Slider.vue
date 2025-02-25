@@ -1,6 +1,7 @@
 <script setup>
  import { useSlider } from '@/composables/useSlider';
  import { defineProps } from 'vue';
+ import { AdvancedImage } from "@cloudinary/vue";
 
  const { prevSlide, nextSlide } = useSlider();
 
@@ -19,7 +20,7 @@
         <div class="slide">
             <div class="slides">
                 <div v-for="(slide, index) in props.slides" :key="index" class="box" :class="slide.class">
-                    <img :src="slide.src" :alt="slide.alt" />
+                    <AdvancedImage :src="slide.src" :alt="slide.alt" />
                     <router-link :to="slide.link">{{ slide.name }}</router-link>
                 </div>
             </div>

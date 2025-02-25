@@ -13,7 +13,7 @@
     font-size: 30px;
     background: none;
     border: none;
-    color: black;
+    color: #74c342;
     cursor: pointer;
     position: absolute;
     top: 20px;

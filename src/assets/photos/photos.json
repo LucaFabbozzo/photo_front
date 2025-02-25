@@ -1,17 +1,53 @@
 {
-    "work1": [
-        "work1/work1_photo1.jpg",
-        "work1/work1_photo2.jpg",
-        "work1/work1_photo3.jpg"
-    ],
-    "work2": [
-        "work2/work2_photo1.jpg",
-        "work2/work2_photo2.jpg",
-        "work2/work2_photo3.jpg"
-    ],
-    "work3": [
-        "work3/work3_photo1.jpg",
-        "work3/work3_photo2.jpg",
-        "work3/work3_photo3.jpg"
-    ]
+    "work1": {
+        "title": "Michela & Michele",
+        "photos": [
+            "work1/michela_michele-1.jpg",
+            "work1/michela_michele-2.jpg",
+            "work1/michela_michele-3.jpg",
+            "work1/michela_michele-4.jpg",
+            "work1/michela_michele-5.jpg",
+            "work1/michela_michele-6.jpg",
+            "work1/michela_michele-7.jpg",
+            "work1/michela_michele-8.jpg",
+            "work1/michela_michele-9.jpg",
+            "work1/michela_michele-10.jpg",
+            "work1/michela_michele-11.jpg",
+            "work1/michela_michele-12.jpg",
+            "work1/michela_michele-13.jpg",
+            "work1/michela_michele-14.jpg",
+            "work1/michela_michele-15.jpg"
+        ]
+    },
+    "work2": {
+        "title": "Elena & Andrea",
+        "photos": [
+            "work2/elena_andrea-1.jpg",
+            "work2/elena_andrea-2.jpg",
+            "work2/elena_andrea-3.jpg",
+            "work2/elena_andrea-4.jpg",
+            "work2/elena_andrea-5.jpg",
+            "work2/elena_andrea-6.jpg",
+            "work2/elena_andrea-7.jpg",
+            "work2/elena_andrea-8.jpg",
+            "work2/elena_andrea-9.jpg",
+            "work2/elena_andrea-10.jpg",
+            "work2/elena_andrea-11.jpg",
+            "work2/elena_andrea-12.jpg",
+            "work2/elena_andrea-13.jpg",
+            "work2/elena_andrea-14.jpg",
+            "work2/elena_andrea-15.jpg",
+            "work2/elena_andrea-16.jpg",
+            "work2/elena_andrea-17.jpg",
+            "work2/elena_andrea-18.jpg"
+        ]
+    },
+    "work3": {
+        "title": "Work 3",
+        "photos": [
+            "work3/work3_photo1.jpg",
+            "work3/work3_photo2.jpg",
+            "work3/work3_photo3.jpg"
+        ]
+    }
 }

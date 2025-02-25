@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@cloudinary/url-gen": "^1.21.0",
+    "@cloudinary/vue": "^1.13.0",
     "dotenv": "^16.4.7",
     "emailjs-com": "^3.2.0",
     "scss": "^0.2.4",

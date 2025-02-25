@@ -1,10 +1,12 @@
 <script setup>
 import Footer from '@/components/Footer.vue';
+import QuickStart from '@/components/QuickStart.vue';
 </script>
 
 
 <template>
-<Footer />
+    <QuickStart />
+    <Footer />
 </template>
 
 <style scoped>
