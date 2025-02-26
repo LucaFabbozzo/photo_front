@@ -2,52 +2,52 @@
     "work1": {
         "title": "Michela & Michele",
         "photos": [
-            "work1/michela_michele-1.jpg",
-            "work1/michela_michele-2.jpg",
-            "work1/michela_michele-3.jpg",
-            "work1/michela_michele-4.jpg",
-            "work1/michela_michele-5.jpg",
-            "work1/michela_michele-6.jpg",
-            "work1/michela_michele-7.jpg",
-            "work1/michela_michele-8.jpg",
-            "work1/michela_michele-9.jpg",
-            "work1/michela_michele-10.jpg",
-            "work1/michela_michele-11.jpg",
-            "work1/michela_michele-12.jpg",
-            "work1/michela_michele-13.jpg",
-            "work1/michela_michele-14.jpg",
-            "work1/michela_michele-15.jpg"
+            "work1/michela_michele-1",
+            "work1/michela_michele-2",
+            "work1/michela_michele-3",
+            "work1/michela_michele-4",
+            "work1/michela_michele-5",
+            "work1/michela_michele-6",
+            "work1/michela_michele-7",
+            "work1/michela_michele-8",
+            "work1/michela_michele-9",
+            "work1/michela_michele-10",
+            "work1/michela_michele-11",
+            "work1/michela_michele-12",
+            "work1/michela_michele-13",
+            "work1/michela_michele-14",
+            "work1/michela_michele-15"
         ]
     },
     "work2": {
         "title": "Elena & Andrea",
         "photos": [
-            "work2/elena_andrea-1.jpg",
-            "work2/elena_andrea-2.jpg",
-            "work2/elena_andrea-3.jpg",
-            "work2/elena_andrea-4.jpg",
-            "work2/elena_andrea-5.jpg",
-            "work2/elena_andrea-6.jpg",
-            "work2/elena_andrea-7.jpg",
-            "work2/elena_andrea-8.jpg",
-            "work2/elena_andrea-9.jpg",
-            "work2/elena_andrea-10.jpg",
-            "work2/elena_andrea-11.jpg",
-            "work2/elena_andrea-12.jpg",
-            "work2/elena_andrea-13.jpg",
-            "work2/elena_andrea-14.jpg",
-            "work2/elena_andrea-15.jpg",
-            "work2/elena_andrea-16.jpg",
-            "work2/elena_andrea-17.jpg",
-            "work2/elena_andrea-18.jpg"
+            "work2/elena_andrea-1",
+            "work2/elena_andrea-2",
+            "work2/elena_andrea-3",
+            "work2/elena_andrea-4",
+            "work2/elena_andrea-5",
+            "work2/elena_andrea-6",
+            "work2/elena_andrea-7",
+            "work2/elena_andrea-8",
+            "work2/elena_andrea-9",
+            "work2/elena_andrea-10",
+            "work2/elena_andrea-11",
+            "work2/elena_andrea-12",
+            "work2/elena_andrea-13",
+            "work2/elena_andrea-14",
+            "work2/elena_andrea-15",
+            "work2/elena_andrea-16",
+            "work2/elena_andrea-17",
+            "work2/elena_andrea-18"
         ]
     },
     "work3": {
         "title": "Work 3",
         "photos": [
-            "work3/work3_photo1.jpg",
-            "work3/work3_photo2.jpg",
-            "work3/work3_photo3.jpg"
+            "work3/work3_photo1",
+            "work3/work3_photo2",
+            "work3/work3_photo3"
         ]
     }
 }

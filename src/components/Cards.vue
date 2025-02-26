@@ -1,18 +1,31 @@
 <script setup>
 import { defineProps } from 'vue';
+import { Cloudinary } from '@cloudinary/url-gen';
 
 const props = defineProps({
     photos: {
         type: Array,
         required: true
     }
-})
+});
+
+const cld = new Cloudinary({
+  cloud: {
+    cloudName: import.meta.env.VITE_CLOUDINARY_CLOUD_NAME,
+  },
+});
+
+// Genera le URL delle immagini
+const generateImageUrl = (photo) => {
+    return cld.image(photo).toURL();
+};
 </script>
 
 <template>
     <div class="card-container">
         <div class="card" v-for="(photo, index) in photos" :key="index">
-            <img :src="`/src/assets/photos/works/${photo}`" alt="Photo">
+            <!-- <img :src="`/src/assets/photos/works/${photo}`" alt="Photo"> -->
+            <img :src="generateImageUrl(photo)" alt="Photo"> 
         </div>
     </div>
 </template>
