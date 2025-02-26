@@ -6,7 +6,7 @@ import Footer from '@/components/Footer.vue';
 
 const cld = new Cloudinary({
   cloud: {
-    cloudName: 'dxm7oj4xi',
+    cloudName: import.meta.env.VITE_CLOUDINARY_CLOUD_NAME,
   },
 });
 

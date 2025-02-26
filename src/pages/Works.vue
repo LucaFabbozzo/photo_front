@@ -1,18 +1,30 @@
 <script setup>
-
+import { Cloudinary } from '@cloudinary/url-gen';
 import Slider from '@/components/Slider.vue';
 import Footer from '@/components/Footer.vue';
 
+const cld = new Cloudinary({
+  cloud: {
+    cloudName: import.meta.env.VITE_CLOUDINARY_CLOUD_NAME,
+  },
+});
+
+
+const img1 = cld.image('RoLu/slide_works/works_slide_1').toURL();
+const img2 = cld.image('RoLu/slide_works/works_slide_2').toURL();
+const img3 = cld.image('RoLu/slide_works/works_slide_3').toURL();
+
+/* 
     // Importa le immagini
 import img1 from '@/assets/photos/slide_works/michela_michele-5.jpg';
 import img2 from '@/assets/photos/slide_works/elena_andrea-9.jpg';
-import img3 from '@/assets/photos/slide_works/slide_works_3.jpg';
+import img3 from '@/assets/photos/slide_works/slide_works_3.jpg'; */
 
     // Creo un'array di oggetti per la slide
 const slides = [
 { class: 'img_1', src: img1, link: 'works/1', name: 'Michela & Michele'},
 { class: 'img_2', src: img2, link: 'works/2', name: 'Elena & Andrea'},
-{ class: 'img_3', src: img3, link: 'works/3', name: 'Third'}
+{ class: 'img_3', src: img3, link: 'works/3', name: 'Cristina & Giorgio'}
 ];
 </script>
 
