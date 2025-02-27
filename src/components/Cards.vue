@@ -1,5 +1,5 @@
 <script setup>
-import { defineProps } from 'vue';
+import { defineProps} from 'vue';
 import { Cloudinary } from '@cloudinary/url-gen';
 
 const props = defineProps({
@@ -19,6 +19,8 @@ const cld = new Cloudinary({
 const generateImageUrl = (photo) => {
     return cld.image(photo).toURL();
 };
+
+
 </script>
 
 <template>
@@ -37,6 +39,8 @@ const generateImageUrl = (photo) => {
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
+    scroll-padding: 10px;
+    scrollbar-width: auto;
 }
 
 .card {
@@ -44,6 +48,7 @@ const generateImageUrl = (photo) => {
     width: 80%;
     margin-right: 10px;
     scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 
 .card img {
