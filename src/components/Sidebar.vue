@@ -8,10 +8,9 @@ import {closeSidebar} from '@/js/sidebar';
         <div class="sidebar-content">
             <ul>
                 <li><router-link to="/" @click.native="closeSidebar">Home</router-link></li>
-                <li><router-link to="/contacts" @click.native="closeSidebar">Contacts</router-link></li>
                 <li><router-link to="/about" @click.native="closeSidebar">About us</router-link></li>
                 <li><router-link to="/works" @click.native="closeSidebar">Works</router-link></li>
-                <li><router-link to="/photojournalism" @click.native="closeSidebar">Photojournalism</router-link></li>
+                <li><router-link to="/contacts" @click.native="closeSidebar">Contacts</router-link></li>
             </ul>
         </div>
     </div>
