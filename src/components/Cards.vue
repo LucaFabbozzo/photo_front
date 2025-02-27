@@ -25,7 +25,7 @@ const generateImageUrl = (photo) => {
     <div class="card-container">
         <div class="card" v-for="(photo, index) in photos" :key="index">
             <!-- <img :src="`/src/assets/photos/works/${photo}`" alt="Photo"> -->
-            <img :src="generateImageUrl(photo)" alt="Photo"> 
+            <img :src="generateImageUrl(photo)" alt="Photo" draggable="false" @contextmenu.prevent> 
         </div>
     </div>
 </template>
@@ -51,4 +51,5 @@ const generateImageUrl = (photo) => {
     height: auto;
     display: block;
 }
+
 </style>

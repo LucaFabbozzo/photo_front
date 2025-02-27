@@ -20,7 +20,7 @@
         <div class="slide">
             <div class="slides">
                 <div v-for="(slide, index) in props.slides" :key="index" class="box" :class="slide.class">
-                    <AdvancedImage :src="slide.src" :alt="slide.alt" />
+                    <AdvancedImage :src="slide.src" :alt="slide.alt" draggable="false" @contextmenu.prevent/>
                     <router-link :to="slide.link">{{ slide.name }}</router-link>
                 </div>
             </div>

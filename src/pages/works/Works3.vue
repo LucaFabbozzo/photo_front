@@ -3,12 +3,13 @@ import Footer from '@/components/Footer.vue';
 import Cards from '@/components/Cards.vue';
 import photos from '@/assets/photos/photos.json';
 
-const work3Photos = photos.work3;
+const work3Photos = photos.work3.photos;
+const work3Title = photos.work3.title;
 </script>
 
 <template>
     <div class="container-works">
-        <h2>Works3</h2>
+        <h2>{{ work3Title }}</h2>
         <Cards :photos="work3Photos"/>
     </div>
     <Footer />
