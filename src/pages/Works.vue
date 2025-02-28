@@ -10,8 +10,8 @@ const cld = new Cloudinary({
 });
 
 
-const img1 = cld.image('RoLu/slide_works/works_slide_1').toURL();
-const img2 = cld.image('RoLu/slide_works/works_slide_2').toURL();
+const img1 = cld.image('RoLu/slide_works/works_slide_1');
+const img2 = cld.image('RoLu/slide_works/works_slide_2');
 
 /* 
     // Importa le immagini

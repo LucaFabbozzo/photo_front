@@ -10,10 +10,10 @@ const cld = new Cloudinary({
   },
 });
 
-const img1 = cld.image('home_slide-1').toURL();
-const img2 = cld.image('home_slide-2').toURL();
-const img3 = cld.image('home_slide-3').toURL();
-const img4 = cld.image('home_slide-4').toURL();
+const img1 = cld.image('home_slide-1');
+const img2 = cld.image('home_slide-2');
+const img3 = cld.image('home_slide-3');
+const img4 = cld.image('home_slide-4');
 
 // Importa le immagini
 /* import img1 from '@/assets/photos/slide_home/home_slide-1.jpg';

@@ -7,10 +7,10 @@ import {closeSidebar} from '@/js/sidebar';
         <button class="close-btn" @click="closeSidebar"><i class="fa-solid fa-times"></i></button>
         <div class="sidebar-content">
             <ul>
-                <li><router-link to="/" @click.native="closeSidebar">Home</router-link></li>
-                <li><router-link to="/about" @click.native="closeSidebar">About us</router-link></li>
-                <li><router-link to="/works" @click.native="closeSidebar">Works</router-link></li>
-                <li><router-link to="/contacts" @click.native="closeSidebar">Contacts</router-link></li>
+                <li><router-link to="/" @click="closeSidebar">Home</router-link></li>
+                <li><router-link to="/about" @click="closeSidebar">About us</router-link></li>
+                <li><router-link to="/works" @click="closeSidebar">Works</router-link></li>
+                <li><router-link to="/contacts" @click="closeSidebar">Contacts</router-link></li>
             </ul>
         </div>
     </div>
