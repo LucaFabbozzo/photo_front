@@ -1,5 +1,5 @@
 <script setup>
-import { defineProps} from 'vue';
+import { defineProps } from 'vue';
 import { Cloudinary } from '@cloudinary/url-gen';
 
 const props = defineProps({
@@ -19,6 +19,7 @@ const cld = new Cloudinary({
 const generateImageUrl = (photo) => {
     return cld.image(photo).toURL();
 };
+
 
 
 </script>
