@@ -47,7 +47,23 @@ const handleImageLoad = () => {
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
     scroll-padding: 10px;
-    scrollbar-width: auto;
+    scrollbar-width: thin; // For Firefox
+    scrollbar-color: #888 #e0e0e0; // For Firefox
+}
+
+// For Webkit browsers (Chrome, Safari)
+.card-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.card-container::-webkit-scrollbar-track {
+    background: #e0e0e0;
+}
+
+.card-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+    border: 2px solid #e0e0e0;
 }
 
 .card {
@@ -85,5 +101,4 @@ const handleImageLoad = () => {
         transform: rotate(360deg);
     }
 }
-
 </style>
