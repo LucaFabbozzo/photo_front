@@ -1,5 +1,5 @@
 <script setup>
-import { defineProps } from 'vue';
+import { defineProps, ref } from 'vue';
 import { Cloudinary } from '@cloudinary/url-gen';
 
 const props = defineProps({
@@ -20,15 +20,21 @@ const generateImageUrl = (photo) => {
     return cld.image(photo).toURL();
 };
 
+// Stato di caricamento delle immagini
+const loading = ref(true);
 
+// Funzione per gestire il caricamento delle immagini
+const handleImageLoad = () => {
+    loading.value = false;
+};
 
 </script>
 
 <template>
     <div class="card-container">
+        <div v-if="loading" class="loading-indicator"></div>
         <div class="card" v-for="(photo, index) in photos" :key="index">
-            <!-- <img :src="`/src/assets/photos/works/${photo}`" alt="Photo"> -->
-            <img :src="generateImageUrl(photo)" alt="Photo" draggable="false" @contextmenu.prevent> 
+            <img :src="generateImageUrl(photo)" alt="Photo" draggable="false" @contextmenu.prevent @load="handleImageLoad"> 
         </div>
     </div>
 </template>
@@ -56,6 +62,28 @@ const generateImageUrl = (photo) => {
     width: 100%;
     height: auto;
     display: block;
+}
+
+.loading-indicator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    border-top: 5px solid #333;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 </style>
