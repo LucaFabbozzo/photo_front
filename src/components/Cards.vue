@@ -1,5 +1,5 @@
 <script setup>
-import { defineProps, ref } from 'vue';
+import { defineProps, ref, onMounted, onUnmounted } from 'vue';
 import { Cloudinary } from '@cloudinary/url-gen';
 
 const props = defineProps({
@@ -10,9 +10,9 @@ const props = defineProps({
 });
 
 const cld = new Cloudinary({
-  cloud: {
-    cloudName: import.meta.env.VITE_CLOUDINARY_CLOUD_NAME,
-  },
+    cloud: {
+        cloudName: import.meta.env.VITE_CLOUDINARY_CLOUD_NAME,
+    },
 });
 
 // Genera le URL delle immagini
@@ -28,27 +28,62 @@ const handleImageLoad = () => {
     loading.value = false;
 };
 
+//Variabile per il riferimento al contenitore delle cards
+const cardContainer = ref(null);
+
+//Funzione per gestire lo scroll orizzontale con la rotella del mouse
+const handleWheel = (e) => {
+    if (e.deltaY !== 0) {
+        e.preventDefault();
+        const scrollAmout = e.deltaY * 5;
+        cardContainer.value.scrollLeft += scrollAmout;
+    }
+};
+
+onMounted(() => {
+    if (cardContainer.value) {
+        cardContainer.value.addEventListener('wheel', handleWheel);
+    }
+});
+
+onUnmounted(() => {
+    if (cardContainer.value) {
+        cardContainer.value.removeEventListener('wheel', handleWheel);
+    }
+});
 </script>
 
 <template>
-    <div class="card-container">
-        <div v-if="loading" class="loading-indicator"></div>
-        <div class="card" v-for="(photo, index) in photos" :key="index">
-            <img :src="generateImageUrl(photo)" alt="Photo" draggable="false" @contextmenu.prevent @load="handleImageLoad"> 
+    <div class="outer-container">
+        <div class="card-container" ref="cardContainer">
+            <div v-if="loading" class="loading-indicator"></div>
+            <div class="card" v-for="(photo, index) in photos" :key="index">
+                <img :src="generateImageUrl(photo)" alt="Photo" draggable="false" @contextmenu.prevent
+                    @load="handleImageLoad">
+            </div>
         </div>
     </div>
 </template>
 
 <style scoped lang="scss">
+
+.outer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    overflow: hidden;
+}
+
+
 .card-container {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
-    scroll-padding: 10px;
     scrollbar-width: thin; // For Firefox
-    scrollbar-color: #888 #e0e0e0; // For Firefox
+    scrollbar-color: #74c342 #ffffff; // For Firefox
 }
 
 // For Webkit browsers (Chrome, Safari)
@@ -57,7 +92,7 @@ const handleImageLoad = () => {
 }
 
 .card-container::-webkit-scrollbar-track {
-    background: #e0e0e0;
+    background: #f6f5f5;
 }
 
 .card-container::-webkit-scrollbar-thumb {
@@ -66,10 +101,14 @@ const handleImageLoad = () => {
     border: 2px solid #e0e0e0;
 }
 
+.card-container::-webkit-scrollbar-thumb:hover {
+    background-color: #555; // Colore della scrollbar quando il cursore è sopra
+}
+
 .card {
     flex: 0 0 auto;
-    width: 80%;
-    margin-right: 10px;
+    width: 60%;
+    margin-right: 5px;
     scroll-snap-align: start;
     scroll-snap-stop: always;
 }
@@ -97,6 +136,7 @@ const handleImageLoad = () => {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
