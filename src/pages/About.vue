@@ -33,6 +33,10 @@ import Footer from '@/components/Footer.vue';
     padding: 20px;
     max-width: 800px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 .about-section, .team-section, .contact-section {
