@@ -35,7 +35,7 @@ const cardContainer = ref(null);
 const handleWheel = (e) => {
     if (e.deltaY !== 0) {
         e.preventDefault();
-        const scrollAmout = e.deltaY * 5;
+        const scrollAmout = e.deltaY * 2;
         cardContainer.value.scrollLeft += scrollAmout;
     }
 };
