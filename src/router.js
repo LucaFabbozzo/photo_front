@@ -19,7 +19,7 @@ const routes = [
 ];
 
 const router = createRouter({
-    history: createWebHistory('/photo_front/'), // Aggiungi il base path qui
+    history: createWebHistory(), 
     routes,
 });
 
