@@ -159,7 +159,6 @@ onUnmounted(() => {
     }
 
     .card-container {
-        overflow-x: hidden; // Nasconde la scrollbar
         -webkit-overflow-scrolling: touch; // Abilita lo scrolling con il touch
     }
 }
