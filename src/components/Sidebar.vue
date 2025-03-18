@@ -95,4 +95,12 @@ import {closeSidebar} from '@/js/sidebar';
         }
     }
 }
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+    .sidebar {
+        .sidebar-content {
+        top: 5%;
+    }
+    }
+}
 </style>

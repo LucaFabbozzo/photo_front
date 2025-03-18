@@ -72,7 +72,6 @@ onUnmounted(() => {
 </template>
 
 <style scoped lang="scss">
-
 .outer-container {
     display: flex;
     justify-content: center;
@@ -153,6 +152,7 @@ onUnmounted(() => {
     .outer-container {
         height: 55vh;
     }
+
     .card {
         width: 95%; // Aumenta la larghezza delle card
         margin-right: 10px; // Aumenta lo spazio tra le card
@@ -160,6 +160,20 @@ onUnmounted(() => {
 
     .card-container {
         -webkit-overflow-scrolling: touch; // Abilita lo scrolling con il touch
+    }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+    .outer-container {
+        height: 55vh; // Sposta il contenitore più in alto
+
+        .card {
+            width: 40%;
+        }
+
+        .card-container {
+            -webkit-overflow-scrolling: touch; // Abilita lo scrolling con il touch
+        }
     }
 }
 </style>

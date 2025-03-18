@@ -17,3 +17,13 @@
     }
 
 }
+
+
+@media (max-width: 1024px) and (orientation: landscape) {
+    .container-works {
+        h2 {
+            margin: 0;
+            font-size: 20px;
+        }
+    }
+}
