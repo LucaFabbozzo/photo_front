@@ -26,9 +26,9 @@ import {closeSidebar} from '@/js/sidebar';
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: rgb(42, 34, 34);
+    background: linear-gradient(to bottom, rgb(32, 26, 26), rgb(86, 86, 86));
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: 0.3s;
 
     .close-btn {
         position: absolute;
