@@ -80,4 +80,20 @@ form {
         background-color: #45a049;
     }
 }
+
+@media (max-width: 600px) {
+    body {
+        justify-content: center;
+    }
+
+    form {
+        padding: 20px;
+        width: 100%;
+
+        input,
+        textarea {
+            width: 100%;
+        }
+    }
+}
 </style>
