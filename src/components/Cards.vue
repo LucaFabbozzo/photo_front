@@ -31,23 +31,29 @@ const handleImageLoad = () => {
 //Variabile per il riferimento al contenitore delle cards
 const cardContainer = ref(null);
 
-//Funzione per gestire lo scroll orizzontale con la rotella del mouse
+// Funzione per gestire lo scroll orizzontale con la rotella del mouse
 const handleWheel = (e) => {
-    if (e.deltaY !== 0) {
+    if (e.deltaMode === 0 && Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
         e.preventDefault();
-        const scrollAmout = e.deltaY * 2;
-        cardContainer.value.scrollLeft += scrollAmout;
+
+        // Calcola un fattore di accelerazione dinamico basato sulla velocità dello scroll
+        const accelerationFactor = Math.min(Math.abs(e.deltaY) / 10, 5); // Limita l'accelerazione a un massimo di 5
+        const scrollAmount = e.deltaY * accelerationFactor;
+
+        cardContainer.value.scrollLeft += scrollAmount;
     }
 };
 
 onMounted(() => {
     if (cardContainer.value) {
-        cardContainer.value.addEventListener('wheel', handleWheel);
+        // Aggiungi il listener per la rotella del mouse
+        cardContainer.value.addEventListener('wheel', handleWheel, { passive: false });
     }
 });
 
 onUnmounted(() => {
     if (cardContainer.value) {
+        // Rimuovi il listener per la rotella del mouse
         cardContainer.value.removeEventListener('wheel', handleWheel);
     }
 });
