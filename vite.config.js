@@ -9,7 +9,7 @@ dotenv.config();
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/photo_front/',
+  base: '/',
   plugins: [
     vue(),
     vueDevTools(),
@@ -22,5 +22,5 @@ export default defineConfig({
   define: {
     'process.env': process.env
   },
-  publicPath: "/photo_front"
+  publicPath: "/"
 })

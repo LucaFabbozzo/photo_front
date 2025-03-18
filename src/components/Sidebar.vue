@@ -7,7 +7,7 @@ import {closeSidebar} from '@/js/sidebar';
         <button class="close-btn" @click="closeSidebar" aria-label="Close Sidebar"><i class="fa-solid fa-times"></i></button>
         <div class="sidebar-content">
             <ul>
-                <li><router-link to="/photo_front" @click="closeSidebar">Home</router-link></li>
+                <li><router-link to="/" @click="closeSidebar">Home</router-link></li>
                 <li><router-link to="/about" @click="closeSidebar">About us</router-link></li>
                 <li><router-link to="/works" @click="closeSidebar">Works</router-link></li>
                 <li><router-link to="/contacts" @click="closeSidebar">Contacts</router-link></li>
