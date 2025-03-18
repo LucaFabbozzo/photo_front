@@ -9,7 +9,7 @@ import Works3 from './pages/works/Works3.vue';
 
 
 const routes = [
-      { path: '/', component: Home, meta: { title: 'Home - Photo-Studio' } },
+      { path: '/photo_front', component: Home, meta: { title: 'Home - Photo-Studio' } },
     { path: '/contacts', component: Contacts, meta: { title: 'Contact - Photo-Studio' } },
     { path: '/about', component: About, meta: { title: 'About us - Photo-Studio' } },
     { path: '/works', component: Works, meta: { title: 'Works - Photo-Studio' } },

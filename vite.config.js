@@ -9,6 +9,7 @@ dotenv.config();
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/photo_front/',
   plugins: [
     vue(),
     vueDevTools(),
