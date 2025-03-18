@@ -3,8 +3,8 @@ import {closeSidebar} from '@/js/sidebar';
 </script>
 
 <template>
-    <div id="sidebar" class="sidebar">
-        <button class="close-btn" @click="closeSidebar"><i class="fa-solid fa-times"></i></button>
+    <div id="sidebar" class="sidebar" role="navigation" aria-label="Main Navigation">
+        <button class="close-btn" @click="closeSidebar" aria-label="Close Sidebar"><i class="fa-solid fa-times"></i></button>
         <div class="sidebar-content">
             <ul>
                 <li><router-link to="/photo_front" @click="closeSidebar">Home</router-link></li>
