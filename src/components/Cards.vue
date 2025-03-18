@@ -165,7 +165,7 @@ onUnmounted(() => {
 
 @media (max-width: 1024px) and (orientation: landscape) {
     .outer-container {
-        height: 55vh; // Sposta il contenitore più in alto
+        height: 40%; // Sposta il contenitore più in alto
 
         .card {
             width: 40%;

@@ -1,10 +1,11 @@
 <script setup>
-import {closeSidebar} from '@/js/sidebar';
+import { closeSidebar } from '@/js/sidebar';
 </script>
 
 <template>
     <div id="sidebar" class="sidebar" role="navigation" aria-label="Main Navigation">
-        <button class="close-btn" @click="closeSidebar" aria-label="Close Sidebar"><i class="fa-solid fa-times"></i></button>
+        <button class="close-btn" @click="closeSidebar" aria-label="Close Sidebar"><i
+                class="fa-solid fa-times"></i></button>
         <div class="sidebar-content">
             <ul>
                 <li><router-link to="/" @click="closeSidebar">Home</router-link></li>
@@ -99,8 +100,15 @@ import {closeSidebar} from '@/js/sidebar';
 @media screen and (max-width: 1024px) and (orientation: landscape) {
     .sidebar {
         .sidebar-content {
-        top: 5%;
-    }
+            top: 0%;
+            ul {
+                li {
+                    a {
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
     }
 }
 </style>
