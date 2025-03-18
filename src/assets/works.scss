@@ -1,9 +1,19 @@
 .container-works {
-    max-width: 70%;
+    max-width: 78%;
     margin: 0 auto;
     margin-top: 80px;
     h2 {
         text-align: center;
         margin-bottom: 10px;
     }
+}
+
+@media (max-width: 600px) {
+    .container-works {
+        max-width: 96%;
+        h2 {
+            margin: 0;
+        }
+    }
+
 }

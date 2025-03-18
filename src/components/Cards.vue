@@ -141,4 +141,20 @@ onUnmounted(() => {
         transform: rotate(360deg);
     }
 }
+
+@media (max-width: 600px) {
+
+    .outer-container {
+        height: 55vh;
+    }
+    .card {
+        width: 95%; // Aumenta la larghezza delle card
+        margin-right: 10px; // Aumenta lo spazio tra le card
+    }
+
+    .card-container {
+        overflow-x: hidden; // Nasconde la scrollbar
+        -webkit-overflow-scrolling: touch; // Abilita lo scrolling con il touch
+    }
+}
 </style>
