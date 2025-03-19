@@ -12,6 +12,7 @@ const sendEmail = (e) => {
         .then((result) => {
             console.log(result.text);
             alert('Email inviata con successo!');
+            e.target.reset();
         }, (error) => {
             console.log(error.text);
             alert('Errore nell\'invio dell\'email.');
@@ -27,11 +28,11 @@ const sendEmail = (e) => {
         <section>
             <form @submit="sendEmail">
                 <label>Name</label>
-                <input type="text" name="user_name">
+                <input type="text" name="user_name" aria-label="Name" aria-required="true" required>
                 <label>Email</label>
-                <input type="email" name="user_email">
+                <input type="email" name="user_email" aria-label="Email" aria-required="true" required>
                 <label>Message</label>
-                <textarea name="message"></textarea>
+                <textarea name="message" aria-label="Message" aria-required="true" required></textarea>
                 <input type="submit" value="Send">
             </form>
         </section>
@@ -68,6 +69,7 @@ form {
         border: 1px solid rgba(219, 216, 216, 0.74);
         border-radius: 5px;
     }
+
     input[type="submit"] {
         background-color: #4CAF50;
         color: white;
@@ -110,6 +112,7 @@ form {
 
     form {
         width: 100%;
+
         input,
         textarea {
             padding: 5px;
