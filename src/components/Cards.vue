@@ -20,12 +20,12 @@ const generateImageUrl = (photo) => {
     return cld.image(photo).toURL();
 };
 
-// Stato di caricamento delle immagini
-const loading = ref(true);
+// Stato di caricamento per ogni immagine
+const loadingStates = ref(props.photos.map(() => true));
 
-// Funzione per gestire il caricamento delle immagini
-const handleImageLoad = () => {
-    loading.value = false;
+// Funzione per gestire il caricamento di una singola immagine
+const handleImageLoad = (index) => {
+    loadingStates.value[index] = false;
 };
 
 //Variabile per il riferimento al contenitore delle cards
@@ -44,10 +44,20 @@ const handleWheel = (e) => {
     }
 };
 
+//Funzione per resettare lo scroll all'inizio
+const resetScrollPosition = () => {
+    if(cardContainer.value) {
+        cardContainer.value.scrollLeft = 0;
+    } 
+};
+
 onMounted(() => {
     if (cardContainer.value) {
         // Aggiungi il listener per la rotella del mouse
         cardContainer.value.addEventListener('wheel', handleWheel, { passive: false });
+
+        //Resetta lo scroll all'inizio
+        resetScrollPosition();
     }
 });
 
@@ -62,10 +72,11 @@ onUnmounted(() => {
 <template>
     <div class="outer-container">
         <div class="card-container" ref="cardContainer">
-            <div v-if="loading" class="loading-indicator"></div>
             <div class="card" v-for="(photo, index) in photos" :key="index">
+                <!-- Mostra il loading-indicator se l'immagine non è ancora caricata -->
+                <div v-if="loadingStates[index]" class="loading-indicator"></div>
                 <img :src="generateImageUrl(photo)" alt="Photo" draggable="false" @contextmenu.prevent
-                    @load="handleImageLoad">
+                    @load="() => handleImageLoad(index)">
             </div>
         </div>
     </div>
@@ -115,6 +126,7 @@ onUnmounted(() => {
     margin-right: 2px;
     scroll-snap-align: start;
     scroll-snap-stop: always;
+    position: relative;
 }
 
 .card img {
@@ -147,7 +159,7 @@ onUnmounted(() => {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1050px) {
 
     .outer-container {
         height: auto;
@@ -160,6 +172,10 @@ onUnmounted(() => {
 
     .card-container {
         -webkit-overflow-scrolling: touch; 
+    }
+    .loading-indicator {
+        top: 50%;
+        left: 45%;
     }
 }
 
@@ -183,6 +199,11 @@ onUnmounted(() => {
         width: 100%;
         height: 100%;
         object-position: center;
+    }
+
+    .loading-indicator {
+        top: 50%;
+        left: 50%;
     }
 }
 
