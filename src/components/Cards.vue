@@ -153,33 +153,28 @@ onUnmounted(() => {
     }
 
     .card {
-        width: 100%; // Aumenta la larghezza delle card
-        margin-right: 10px; // Aumenta lo spazio tra le card
+        width: 100%; 
+        margin-right: 3px; 
     }
 
     .card-container {
-        -webkit-overflow-scrolling: touch; // Abilita lo scrolling con il touch
+        -webkit-overflow-scrolling: touch; 
     }
 }
 
 @media (max-width: 1024px) and (orientation: landscape) {
     .outer-container {
-        height: auto; // Sposta il contenitore più in alto
-        flex-direction: column; // Cambia la direzione del layout in verticale
+        height: auto; 
+        margin-top: -55px;
     }
 
     .card-container {
-        flex-direction: column; // Dispone le card in verticale
-        overflow-y: auto; // Abilita lo scroll verticale
-        overflow-x: hidden; // Disabilita lo scroll orizzontale
-        height: 100%; // Assicura che il contenitore occupi tutta l'altezza disponibile
-        -webkit-overflow-scrolling: touch; // Abilita lo scrolling con il touch
+        height: 100%; 
     }
 
     .card {
-        width: 100%; // Adatta la larghezza delle card
-        margin-bottom: 10px; // Aggiunge spazio tra le card
-        scroll-snap-align: start; // Mantiene lo snap verticale
+        width: 100%;
+        height: 100%; 
     }
 }
 </style>
