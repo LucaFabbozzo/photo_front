@@ -134,6 +134,7 @@ onUnmounted(() => {
     border-top: 5px solid #333;
     border-radius: 50%;
     animation: spin 1s linear infinite;
+    z-index: 1000; 
 }
 
 @keyframes spin {

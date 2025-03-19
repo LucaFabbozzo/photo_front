@@ -8,7 +8,7 @@
         .slides {
             .box {
                 width: 100%;
-                height: 100vh;
+                height: auto;
                 margin: 0 auto;
                 display: none;
 
@@ -74,7 +74,7 @@
     }
 
 
-    @media (max-width: 600px) {
+    @media (max-width: 1030px) {
         .slide {
             .slides {
                 display: flex;

@@ -96,4 +96,26 @@ form {
         }
     }
 }
+
+
+
+@media (max-width: 1400px) and (orientation: landscape) {
+    body {
+        justify-content: center;
+    }
+
+    section {
+        width: 70%;
+    }
+
+    form {
+        width: 100%;
+        input,
+        textarea {
+            padding: 5px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+    }
+}
 </style>
