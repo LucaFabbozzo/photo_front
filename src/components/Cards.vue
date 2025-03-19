@@ -80,7 +80,6 @@ onUnmounted(() => {
     overflow: hidden;
 }
 
-
 .card-container {
     display: flex;
     overflow-x: auto;
@@ -113,7 +112,7 @@ onUnmounted(() => {
 .card {
     flex: 0 0 auto;
     width: 60%;
-    margin-right: 5px;
+    margin-right: 2px;
     scroll-snap-align: start;
     scroll-snap-stop: always;
 }
@@ -150,11 +149,11 @@ onUnmounted(() => {
 @media (max-width: 600px) {
 
     .outer-container {
-        height: 55vh;
+        height: auto;
     }
 
     .card {
-        width: 95%; // Aumenta la larghezza delle card
+        width: 100%; // Aumenta la larghezza delle card
         margin-right: 10px; // Aumenta lo spazio tra le card
     }
 
@@ -165,10 +164,11 @@ onUnmounted(() => {
 
 @media (max-width: 1024px) and (orientation: landscape) {
     .outer-container {
-        height: 40%; // Sposta il contenitore più in alto
+        height: auto; // Sposta il contenitore più in alto
 
         .card {
-            width: 40%;
+            width: 100%;
+            height: auto;
         }
 
         .card-container {
