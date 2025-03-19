@@ -162,19 +162,28 @@ onUnmounted(() => {
     }
 }
 
-@media (max-width: 1024px) and (orientation: landscape) {
+
+@media (max-width: 1368px) and (orientation: landscape) {
     .outer-container {
-        height: auto; 
-        margin-top: -55px;
+        height: 100vh; /* Imposta l'altezza per occupare l'intera viewport */
     }
 
     .card-container {
-        height: 100%; 
+        height: 100vh; /* Imposta l'altezza per occupare l'intera viewport */
     }
 
     .card {
+        width: 100vw; /* Imposta la larghezza per occupare l'intera viewport */
+        height: 100vh; /* Imposta l'altezza per occupare l'intera viewport */ 
+    }
+
+    .card img {
+        object-fit: cover; /* Assicura che l'immagine riempia completamente il contenitore */
         width: 100%;
-        height: 100%; 
+        height: 100%;
+        object-position: center;
     }
 }
+
+
 </style>

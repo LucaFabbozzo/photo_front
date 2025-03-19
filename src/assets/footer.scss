@@ -17,3 +17,11 @@ footer {
         }
     }
 }
+
+@media (max-width: 1368px) and (orientation: landscape) {
+    footer {
+        .icons {
+            display: none;
+        }
+    }
+}
