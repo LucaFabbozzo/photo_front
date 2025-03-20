@@ -16,6 +16,9 @@ const errors = reactive({
     message: ''
 });
 
+// Site Key di reCAPTCHA
+const recaptchaSiteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
+
 
 // Funzione per validare i dati del form
 const validateForm = () => {
@@ -28,23 +31,23 @@ const validateForm = () => {
 
     // Validazione del nome
     if (!formData.name.trim()) {
-        errors.name = 'Il nome è obbligatorio.';
+        errors.name = 'Name is required.';
         isValid = false;
     }
 
     // Validazione dell'email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!formData.email.trim()) {
-        errors.email = 'L\'email è obbligatoria.';
+        errors.email = 'Email is required.';
         isValid = false;
     } else if (!emailRegex.test(formData.email)) {
-        errors.email = 'Inserisci un indirizzo email valido.';
+        errors.email = 'Please enter a valid email adress.';
         isValid = false;
     }
 
     // Validazione del messaggio
     if (!formData.message.trim()) {
-        errors.message = 'Il messaggio è obbligatorio.';
+        errors.message = 'Message is required.';
         isValid = false;
     }
 
@@ -63,19 +66,27 @@ const sendEmail = (e) => {
         return; //interrompi l'invio se la validazione fallisce
     }
 
+    // Ottieni il token reCAPTCHA
+    const recaptchaResponse = grecaptcha.getResponse();
+    if (!recaptchaResponse) {
+        alert('Please complete the reCAPTCHA.');
+        return; // Interrompi l'invio se reCAPTCHA non è completato
+    }
+
     emailjs.sendForm(import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         form,
         import.meta.env.VITE_EMAILJS_USER_ID)
         .then((result) => {
             console.log(result.text);
-            alert('Email inviata con successo!');
+            alert('Email sent successfully!');
             formData.name = '';
             formData.email = '';
             formData.message = '';
+            grecaptcha.reset(); // Resetta il reCAPTCHA dopo l'invio
         }, (error) => {
             console.log(error.text);
-            alert('Errore nell\'invio dell\'email.');
+            alert('Error sending email.');
         });
 };
 </script>
@@ -93,14 +104,20 @@ const sendEmail = (e) => {
                 </div>
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="email" name="user_email" v-model="formData.email" aria-label="Email" aria-required="true">
+                    <input type="email" name="user_email" v-model="formData.email" aria-label="Email"
+                        aria-required="true">
                     <span class="error-message" v-if="errors.email">{{ errors.email }}</span>
                 </div>
                 <div class="form-group">
                     <label>Message</label>
-                    <textarea name="message" v-model="formData.message" aria-label="Message" aria-required="true"></textarea>
+                    <textarea name="message" v-model="formData.message" aria-label="Message"
+                        aria-required="true"></textarea>
                     <span class="error-message" v-if="errors.message">{{ errors.message }}</span>
                 </div>
+
+                <!-- reCAPTCHA widget -->
+                <div class="g-recaptcha" :data-sitekey="recaptchaSiteKey"></div>
+
                 <input type="submit" value="Send">
             </form>
         </section>
