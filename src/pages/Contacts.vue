@@ -16,9 +16,6 @@ const errors = reactive({
     message: ''
 });
 
-// Site Key di reCAPTCHA
-const recaptchaSiteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
-
 
 // Funzione per validare i dati del form
 const validateForm = () => {
@@ -66,12 +63,6 @@ const sendEmail = (e) => {
         return; //interrompi l'invio se la validazione fallisce
     }
 
-    // Ottieni il token reCAPTCHA
-    const recaptchaResponse = grecaptcha.getResponse();
-    if (!recaptchaResponse) {
-        alert('Please complete the reCAPTCHA.');
-        return; // Interrompi l'invio se reCAPTCHA non è completato
-    }
 
     emailjs.sendForm(import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
@@ -83,7 +74,6 @@ const sendEmail = (e) => {
             formData.name = '';
             formData.email = '';
             formData.message = '';
-            grecaptcha.reset(); // Resetta il reCAPTCHA dopo l'invio
         }, (error) => {
             console.log(error.text);
             alert('Error sending email.');
@@ -114,9 +104,6 @@ const sendEmail = (e) => {
                         aria-required="true"></textarea>
                     <span class="error-message" v-if="errors.message">{{ errors.message }}</span>
                 </div>
-
-                <!-- reCAPTCHA widget -->
-                <div class="g-recaptcha" :data-sitekey="recaptchaSiteKey"></div>
 
                 <input type="submit" value="Send">
             </form>
