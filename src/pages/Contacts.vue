@@ -88,17 +88,17 @@ const sendEmail = (e) => {
             <form @submit="sendEmail">
                 <div class="form-group">
                     <label>Name</label>
-                    <input type="text" name="user_name" v-model="formData.name" aria-label="Name" aria-required="true" required>
+                    <input type="text" name="user_name" v-model="formData.name" aria-label="Name" aria-required="true">
                     <span class="error-message" v-if="errors.name">{{ errors.name }}</span>
                 </div>
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="email" name="user_email" v-model="formData.email" aria-label="Email" aria-required="true" required>
+                    <input type="email" name="user_email" v-model="formData.email" aria-label="Email" aria-required="true">
                     <span class="error-message" v-if="errors.email">{{ errors.email }}</span>
                 </div>
                 <div class="form-group">
                     <label>Message</label>
-                    <textarea name="message" v-model="formData.message" aria-label="Message" aria-required="true" required></textarea>
+                    <textarea name="message" v-model="formData.message" aria-label="Message" aria-required="true"></textarea>
                     <span class="error-message" v-if="errors.message">{{ errors.message }}</span>
                 </div>
                 <input type="submit" value="Send">
