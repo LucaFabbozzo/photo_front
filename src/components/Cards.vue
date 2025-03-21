@@ -26,6 +26,12 @@ const loadingStates = ref(props.photos.map(() => true));
 // Funzione per gestire il caricamento di una singola immagine
 const handleImageLoad = (index) => {
     loadingStates.value[index] = false;
+
+    // Controlla se tutte le immagini sono caricate
+    if (loadingStates.value.every((state) => !state)) {
+        // Forza un ricalcolo del layout
+        cardContainer.value.scrollLeft = cardContainer.value.scrollLeft;
+    }
 };
 
 //Variabile per il riferimento al contenitore delle cards
