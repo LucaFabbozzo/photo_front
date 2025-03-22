@@ -89,6 +89,26 @@
     }
 }
 
+.site-title {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 500;
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    pointer-events: none; // Evita che interferisca con i clic
+
+    /* Cornice rettangolare trasparente */
+    padding: 10px 15px; // Spaziatura interna
+    border: 2px solid #74c342; // Bordo bianco trasparente
+    background-color: #43855aae; // Sfondo nero trasparente
+    border-radius: 5px; // Angoli arrotondati
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); // Ombra per un effetto più elegante
+}
+
 @media (orientation: landscape) {
     .slider .slide .slides img {
         height: 100vh;
