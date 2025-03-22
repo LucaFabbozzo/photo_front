@@ -1,3 +1,6 @@
+@import url("https://api.fontshare.com/v2/css?f[]=melodrama@400,500&f[]=dancing-script@1&display=swap");
+
+
 .slider {
     position: relative;
     width: 100%;
@@ -22,7 +25,7 @@
                     left: 50%;
                     transform: translate(-50%, -50%);
                     text-decoration: none;
-                    color: #333333;
+                    color: #ffffff;
                     font-family: "Ubuntu", serif;
                     font-weight: 400;
                     font-style: normal;
@@ -88,24 +91,32 @@
     }
 }
 
+
 .site-title {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-family: 'Melodrama', serif;
     z-index: 500;
-    font-size: 2.5rem;
-    font-weight: bolder;
-    color: #e8e6e6;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-size: 4.8rem;
+    font-weight: 400;
+    color: #030303;
+     //text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     pointer-events: none; // Evita che interferisca con i clic
 
     /* Cornice rettangolare trasparente */
-    padding: 50px 20px; // Spaziatura interna
-    border: 1px solid #74c342; // Bordo bianco trasparente
-    background-color: #5a5a5a41; // Sfondo nero trasparente
+    padding: 12px 25px; // Spaziatura interna
+    padding-top: 0px;
+    border: 1px solid #060606; // Bordo bianco trasparente
+    background-color: #ffffff9e; // Sfondo nero trasparente
     border-radius: 3px; // Angoli arrotondati
     //box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); // Ombra per un effetto più elegante
+    .site-title2 {
+        font-family: 'Dancing Script', cursive;
+        font-size: 1.5rem;
+        text-align: center;
+    }
 }
 
 
