@@ -1,6 +1,6 @@
 <script setup>
  import { useSlider } from '@/composables/useSlider';
- import { defineProps } from 'vue';
+ import { defineProps,  onMounted, onBeforeUnmount  } from 'vue';
  import { AdvancedImage } from "@cloudinary/vue";
 
  const { prevSlide, nextSlide } = useSlider();
@@ -12,6 +12,35 @@
         required: true
     }
  });
+
+// Funzione per regolare l'altezza delle immagini solo in modalità landscape
+const adjustImageHeight = () => {
+    // Verifica se l'orientamento è landscape
+    if (window.matchMedia("(orientation: landscape)").matches) {
+        const images = document.querySelectorAll('.slider .slide .slides img');
+        const viewportHeight = window.innerHeight;
+
+        images.forEach((img) => {
+            img.style.height = `${viewportHeight}px`;
+        });
+    } else {
+        // Ripristina l'altezza automatica in modalità portrait
+        const images = document.querySelectorAll('.slider .slide .slides img');
+        images.forEach((img) => {
+            img.style.height = 'auto';
+        });
+    }
+};
+
+// Aggiungi event listener al montaggio e rimuovilo prima dello smontaggio
+onMounted(() => {
+    adjustImageHeight();
+    window.addEventListener('resize', adjustImageHeight);
+});
+
+onBeforeUnmount(() => {
+    window.removeEventListener('resize', adjustImageHeight);
+});
 </script>
 
 
