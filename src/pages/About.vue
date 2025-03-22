@@ -74,4 +74,10 @@ p {
     margin: 0;
     color: #666;
 }
+
+@media (orientation: landscape) {
+    .about-container{
+        max-width: 555px;
+    }
+}
 </style>
