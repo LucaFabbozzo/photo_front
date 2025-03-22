@@ -24,7 +24,7 @@ import { closeSidebar } from '@/js/sidebar';
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 1000;
     top: 0;
     left: 0;
     background: linear-gradient(to bottom, rgb(32, 26, 26), rgb(86, 86, 86));
