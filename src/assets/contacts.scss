@@ -2,15 +2,46 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    justify-content: flex-end;
     height: 100vh;
     margin: 0;
+    background: radial-gradient(circle, rgba(31, 25, 25, 1) 0%, rgba(109, 109, 109, 1) 100%);
+    background-blend-mode: overlay;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    overflow: hidden;
+
+    // Aggiunta di un effetto visivo dinamico
+    &:before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+        animation: rotateBackground 20s linear infinite;
+        z-index: -1;
+    }
 }
+
+// Animazione per il gradiente
+@keyframes rotateBackground {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 
 form {
     display: flex;
     flex-direction: column;
     padding: 30px 70px 30px 221px;
+    background: rgba(37, 37, 37, 0.766);
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 
     .form-group {
         display: flex;
@@ -39,7 +70,9 @@ form {
     textarea {
         width: 400px;
         padding: 10px;
-        border: 1px solid rgba(219, 216, 216, 0.74);
+        border: 1px solid rgba(200, 200, 200, 0.7); // Change border color
+        background-color: rgba(223, 222, 222, 0.9); // Change input background
+        color: #333; // Change text color
         border-radius: 5px;
         margin-bottom: 10px;
     }

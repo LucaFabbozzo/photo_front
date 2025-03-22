@@ -27,7 +27,7 @@ import { closeSidebar } from '@/js/sidebar';
     z-index: 1000;
     top: 0;
     left: 0;
-    background: linear-gradient(to bottom, rgb(32, 26, 26), rgb(86, 86, 86));
+    background: radial-gradient(circle, rgb(31, 25, 25) 0%, rgb(109, 109, 109) 100%);
     overflow-x: hidden;
     transition: 0.3s;
 
