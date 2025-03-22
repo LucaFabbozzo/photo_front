@@ -37,7 +37,7 @@
                         bottom: -2px; // Distanza dalla base del testo
                         width: 100%;
                         height: 2px; // Spessore della sottolineatura
-                        background-color: #898989; // Colore della sottolineatura
+                        background-color: #74c342; // Colore della sottolineatura
                         transform: scaleX(0); // Nasconde inizialmente la sottolineatura
                         transform-origin: left;
                         transition: transform 0.3s ease; // Animazione per l'hover
@@ -95,18 +95,24 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 500;
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     font-weight: bold;
-    color: white;
+    color: #e8e6e6;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     pointer-events: none; // Evita che interferisca con i clic
 
     /* Cornice rettangolare trasparente */
     padding: 10px 15px; // Spaziatura interna
-    border: 2px solid #74c342; // Bordo bianco trasparente
-    background-color: #43855aae; // Sfondo nero trasparente
+    border: 1px solid #74c342; // Bordo bianco trasparente
+    background-color: #979898d0; // Sfondo nero trasparente
     border-radius: 5px; // Angoli arrotondati
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); // Ombra per un effetto più elegante
+}
+
+@media (max-width: 768px) {
+    .site-title {
+        font-size: 0.8rem;
+    }
 }
 
 @media (orientation: landscape) {
