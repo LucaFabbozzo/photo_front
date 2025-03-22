@@ -106,6 +106,7 @@
     pointer-events: none; // Evita che interferisca con i clic
 
     /* Cornice rettangolare trasparente */
+    width: 432px;
     padding: 12px 25px; // Spaziatura interna
     padding-top: 0px;
     border: 1px solid #060606; // Bordo bianco trasparente
@@ -121,22 +122,13 @@
 
 
 
-@media (max-width: 768px) and (orientation: portrait) {
-    .slider {
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+@media (max-width: 1000px) and (orientation: portrait) {
     .site-title {
-        font-size: 1.5rem;
-        top: 15%;
-        left: 50%;
-        padding: 10px 10px;
-        font-weight: bold;
-        background-color: #5a5a5a;
-        border: 1px solid #74c342;
-        border-radius: 5px;
+        width: 210px;
+        font-size: 2rem;
+        .site-title2 {
+            font-size: 0.6rem;
+        }
     }
 }
 
