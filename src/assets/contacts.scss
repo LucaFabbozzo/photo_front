@@ -4,10 +4,8 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: radial-gradient(circle, rgba(31, 25, 25, 1) 0%, rgba(109, 109, 109, 1) 100%);
     background-blend-mode: overlay;
     color: white;
-    font-family: 'Outfit', sans-serif;
     overflow: hidden;
 }
 
@@ -16,7 +14,7 @@ form {
     display: flex;
     flex-direction: column;
     padding: 30px 70px 30px 221px;
-    background: rgba(37, 37, 37, 0.766);
+    background: #1F282C;
     border-radius: 5px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 

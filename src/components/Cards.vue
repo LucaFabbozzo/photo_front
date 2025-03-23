@@ -93,7 +93,7 @@ onUnmounted(() => {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    height: 80vh;
     overflow: hidden;
 }
 
@@ -104,7 +104,7 @@ onUnmounted(() => {
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
     scrollbar-width: thin; // For Firefox
-    scrollbar-color: #74c342 #ffffff; // For Firefox
+    scrollbar-color: #BFA252 #dcdcdc3b; // For Firefox
 }
 
 // For Webkit browsers (Chrome, Safari)
