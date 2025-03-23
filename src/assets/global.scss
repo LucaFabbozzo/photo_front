@@ -8,7 +8,7 @@
 
 
 body {
-  background: radial-gradient(circle, rgba(59, 57, 57, 0.677) 0%, rgba(207, 203, 203, 0.816) 100%);
+  background: #1C1E20;
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
   font-weight: 300;
   font-style: normal;
@@ -18,37 +18,4 @@ body {
   width: 100vw;
 }
 
-html {
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-}
-
-@media (max-width: 768px) {
-  body {
-    font-size: medium;
-  }
-
-  header {
-    font-size: 1.2rem;
-  }
-
-  .sidebar-content ul li a {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    font-size: small;
-  }
-
-  header {
-    font-size: 1rem;
-  }
-
-  .sidebar-content ul li a {
-    font-size: 1.2rem;
-  }
-}
 
