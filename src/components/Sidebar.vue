@@ -18,7 +18,7 @@ import { closeSidebar } from '@/js/sidebar';
 </template>
 
 <style scoped lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Rowdies:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inconsolata:wght@200..900&display=swap" rel="stylesheet');
 
 .sidebar {
     height: 100%;
@@ -27,7 +27,7 @@ import { closeSidebar } from '@/js/sidebar';
     z-index: 1000;
     top: 0;
     left: 0;
-    background: radial-gradient(circle, rgb(31, 25, 25) 0%, rgb(109, 109, 109) 100%);
+    background: radial-gradient(circle, rgba(52, 52, 52, 0.991) 0%, rgb(211, 211, 211) 100%);
     overflow-x: hidden;
     transition: 0.3s;
 
@@ -60,9 +60,9 @@ import { closeSidebar } from '@/js/sidebar';
                 a {
                     text-decoration: none;
                     font-size: 40px;
-                    font-family: "Rowdies", serif;
-                    font-weight: 400;
-                    font-style: normal;
+                    font-family: "Inconsolata", monospace;
+                    font-weight: 200;
+                    text-transform: uppercase;
                     cursor: pointer;
                     color: white;
                     display: inline-block;
@@ -77,7 +77,7 @@ import { closeSidebar } from '@/js/sidebar';
                         display: block;
                         margin-top: 5px;
                         right: 0;
-                        background: #999898;
+                        background: #BFA252;
                         transition: width 0.3s ease;
                         -webkit-transition: width 0.3s ease;
                     }
@@ -100,7 +100,7 @@ import { closeSidebar } from '@/js/sidebar';
 @media screen and (max-width: 1024px) and (orientation: landscape) {
     .sidebar {
         .sidebar-content {
-            top: 0%;
+            top: 15%;
             ul {
                 li {
                     a {
