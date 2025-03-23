@@ -2,6 +2,18 @@
 import { reactive } from 'vue';
 import Footer from '@/components/Footer.vue';
 import emailjs from 'emailjs-com';
+import { Cloudinary } from '@cloudinary/url-gen';
+
+//Configuro Cloudinary
+
+const cld = new Cloudinary({
+    cloud: {
+        cloudName: import.meta.env.VITE_CLOUDINARY_CLOUD_NAME,
+    },
+});
+
+//Ottengo l'immagine da Cloudinary
+const backgroundImg = cld.image('home_slide-6_ophugy').toURL();
 
 // Dati del form e messaggi di errore
 const formData = reactive({
@@ -83,8 +95,7 @@ const sendEmail = (e) => {
 
 
 <template>
-
-    <body>
+    <div class="contacts-container" :style="{ backgroundImage: `url(${backgroundImg})` }">
         <section>
             <form @submit="sendEmail">
                 <div class="form-group">
@@ -109,8 +120,7 @@ const sendEmail = (e) => {
             </form>
         </section>
         <Footer />
-    </body>
-
+    </div>
 </template>
 
 <style scoped lang="scss">

@@ -1,12 +1,15 @@
-body {
+
+
+.contacts-container {
+    background-image: url('{{backgroundImg}}');
+    background-size: cover;
+    background-position: bottom;
+    height: 100vh; /* Occupa l'intera viewport */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-blend-mode: overlay;
-    color: white;
-    overflow: hidden;
+    color: #ffffff;
 }
 
 
@@ -14,9 +17,9 @@ form {
     display: flex;
     flex-direction: column;
     padding: 30px 70px 30px 221px;
-    background: #1F282C;
+    background: #00000027;
     border-radius: 5px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    //box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 
     .form-group {
         display: flex;
@@ -53,7 +56,7 @@ form {
     }
 
     input[type="submit"] {
-        background-color: #4CAF50;
+        background-color: #BFA252;
         color: white;
         border: none;
         cursor: pointer;
@@ -61,7 +64,7 @@ form {
     }
 
     input[type="submit"]:hover {
-        background-color: #45a049;
+        background-color: #1F282C;
     }
 }
 
