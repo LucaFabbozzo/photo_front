@@ -28,9 +28,11 @@ form {
         position: relative;
 
         .error-message {
-            color: red;
-            font-size: 10px;
+            color: #f96262;
+            font-size: 13px;
+            font-weight: bolder;
             margin-bottom: 5px;
+            margin-left: auto;  
         }
     }
 
