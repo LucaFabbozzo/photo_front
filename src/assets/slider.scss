@@ -4,7 +4,7 @@
 .slider {
     position: relative;
     width: 100%;
-    margin: 47% auto;
+    margin: auto;
     overflow: hidden;
 
     .slide {
@@ -123,11 +123,17 @@
 
 
 @media (max-width: 1000px) and (orientation: portrait) {
+    
     .site-title {
-        width: 210px;
-        font-size: 2rem;
+        top: 12%;
+        width: 191px;
+        font-size: 1.8rem;
+        border: none; // Bordo bianco trasparente
+        background-color: #ffffff00; // Sfondo nero trasparente
+        color: #ffffff;
         .site-title2 {
             font-size: 0.6rem;
+            color: #BFA252;
         }
     }
 }
