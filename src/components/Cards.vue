@@ -133,11 +133,6 @@ onUnmounted(() => {
     scroll-snap-align: start;
     scroll-snap-stop: always;
     position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; // Aggiunta transizione per animazione
-    &:hover {
-        transform: translateY(-10px); // Solleva la card di 10px
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); // Aggiunge un'ombra per enfatizzare l'effetto
-    }
 }
 
 .card img {
