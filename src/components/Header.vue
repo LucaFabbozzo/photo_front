@@ -10,14 +10,20 @@
 
 <style scoped lang="scss">
 .open-btn {
-    font-size: 30px;
+    font-size: 40px;
     background: none;
     border: none;
     color: #BFA252;
     cursor: pointer;
     position: absolute;
     top: 20px;
-    left: 20px;
+    right: 39px;
     z-index: 1;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.open-btn:hover {
+    transform: scale(1.2);
+    color: #a5882b;
 }
 </style>

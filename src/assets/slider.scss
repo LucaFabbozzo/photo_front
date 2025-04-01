@@ -94,38 +94,37 @@
 
 .site-title {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 2%;
+    left: 1%;
+    transform: none;
     font-family: 'Melodrama', serif;
     z-index: 500;
-    font-size: 4.8rem;
+    font-size: 3.5rem;
     font-weight: 400;
     color: #030303;
      //text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     pointer-events: none; // Evita che interferisca con i clic
 
     /* Cornice rettangolare trasparente */
-    width: 432px;
+    width: 328px;
     padding: 12px 25px; // Spaziatura interna
     padding-top: 0px;
     border: 1px solid #060606; // Bordo bianco trasparente
-    background-color: #ffffff9e; // Sfondo nero trasparente
+    background-color: #ffffffb7; // Sfondo nero trasparente
     border-radius: 3px; // Angoli arrotondati
     //box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); // Ombra per un effetto più elegante
     .site-title2 {
         font-family: 'Dancing Script', cursive;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         text-align: center;
     }
 }
 
 
 
-@media (max-width: 1000px) and (orientation: portrait) {
-    
+@media (max-width: 1000px) and (orientation: portrait) {  
     .site-title {
-        top: 12%;
+        top: 2%;
         width: 191px;
         font-size: 1.8rem;
         border: none; // Bordo bianco trasparente
