@@ -125,15 +125,22 @@
 @media (max-width: 1000px) and (orientation: portrait) {  
     .site-title {
         top: 4%;
+        left: 3%;
         width: 191px;
         font-size: 1.8rem;
         border: none; // Bordo bianco trasparente
-        background-color: #ffffff00; // Sfondo nero trasparente
-        color: #ffffff;
+        background-color: #ffffffcd; // Sfondo nero trasparente
+        color: #000000;
         .site-title2 {
             font-size: 0.6rem;
-            color: #BFA252;
+            color: #000000;
         }
+    }
+    img {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        object-position: center;
     }
 }
 
