@@ -24,6 +24,6 @@
 
 .open-btn:hover {
     transform: scale(1.2);
-    color: #a5882b;
+    color: #725806;
 }
 </style>

@@ -34,12 +34,18 @@ import { closeSidebar } from '@/js/sidebar';
     .close-btn {
         position: absolute;
         top: 20px;
-        left: 20px;
-        font-size: 36px;
+        left: 30px;
+        font-size: 45px;
         background: none;
         border: none;
-        color: white;
+        color: #BFA252;
         cursor: pointer;
+        transition: transform 0.3s ease, color 0.3s ease;
+
+        &.close-btn:hover {
+        transform: scale(1.2);
+        color: #2b2a27;
+        }
     }
 
     .sidebar-content {
