@@ -60,14 +60,15 @@ onMounted(() => {
     align-items: center;
     overflow-y: auto;
     scroll-snap-type: y mandatory;
-    max-height: 80vh;
+    scrollbar-width: thin;
+    max-height: 75vh;
     overflow-y: auto;
 }
 
 
 .card {
     width: 60%;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .card img {
@@ -108,6 +109,10 @@ onMounted(() => {
 
     .card-container {
         max-height: 80vh;
+        .card {
+            width: 90%;
+            margin-bottom: 5px;
+        }
     }
 }
 
