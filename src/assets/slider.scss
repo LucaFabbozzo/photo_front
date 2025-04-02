@@ -53,7 +53,8 @@
             }
 
             img {
-                width: 100%;
+                width: 100vw;
+                height: 100vh;
                 object-fit: cover;
                 object-position: center;
             }
@@ -94,7 +95,7 @@
 
 .site-title {
     position: fixed;
-    top: 2%;
+    top: 1%;
     left: 1%;
     transform: none;
     font-family: 'Melodrama', serif;
@@ -106,12 +107,12 @@
     pointer-events: none; // Evita che interferisca con i clic
 
     /* Cornice rettangolare trasparente */
-    width: 287px;
+    width: 293px;
     padding: 12px 25px; // Spaziatura interna
     padding-top: 0px;
-    border: 1px solid #060606; // Bordo bianco trasparente
-    background-color: #ffffffb7; // Sfondo nero trasparente
-    border-radius: 3px; // Angoli arrotondati
+    border: 4px solid #BFA252; // Bordo bianco trasparente
+    background-color: #ffffff6e; // Sfondo nero trasparente
+    border-radius: 5px; // Angoli arrotondati
     //box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); // Ombra per un effetto più elegante
     .site-title2 {
         font-family: 'Dancing Script', cursive;
@@ -124,12 +125,11 @@
 
 @media (max-width: 1000px) and (orientation: portrait) {  
     .site-title {
-        top: 2%;
-        left: 3%;
+        top: 1%;
+        left: 1%;
         width: 191px;
         font-size: 1.8rem;
         border: none; // Bordo bianco trasparente
-        background-color: #ffffffcd; // Sfondo nero trasparente
         color: #000000;
         .site-title2 {
             font-size: 0.6rem;
@@ -144,8 +144,21 @@
     }
 }
 
-@media (orientation: landscape) {
+@media (max-width: 1000px) and (orientation: landscape) {
     .slider .slide .slides img {
         height: 100vh;
+    }
+    .site-title {
+        top: 1%;
+        left: 1%;
+        width: 191px;
+        font-size: 1.8rem;
+        border: none; // Bordo bianco trasparente
+        color: #000000;
+        background-color: #BFA252;
+        .site-title2 {
+            font-size: 0.6rem;
+            color: #000000;
+        }
     }
 }

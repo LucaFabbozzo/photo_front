@@ -1,9 +1,23 @@
 <script setup>
+import { AdvancedImage } from '@cloudinary/vue';
 import { closeSidebar } from '@/js/sidebar';
+import { Cloudinary } from '@cloudinary/url-gen';
+
+//Configura cloudinary
+const cld = new Cloudinary({
+    cloud: {
+        cloudName: import.meta.env.VITE_CLOUDINARY_CLOUD_NAME,
+    },
+})
+
+//Crea l'immagine Cloudinary
+const sidebarImage = cld.image('menu_mrzyvq');
+
 </script>
 
 <template>
     <div id="sidebar" class="sidebar" role="navigation" aria-label="Main Navigation">
+        <AdvancedImage :cldImg="sidebarImage" class="sidebar-bg" alt="Sidebar Background" />
         <button class="close-btn" @click="closeSidebar" aria-label="Close Sidebar"><i
                 class="fa-solid fa-times"></i></button>
         <div class="sidebar-content">
@@ -27,14 +41,23 @@ import { closeSidebar } from '@/js/sidebar';
     z-index: 1000;
     top: 0;
     left: 0;
-    background: radial-gradient(circle, rgba(52, 52, 52, 0.991) 0%, rgb(211, 211, 211) 100%);
     overflow-x: hidden;
     transition: 0.3s;
 
+    .sidebar-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1; // Assicurati che l'immagine sia dietro il contenuto
+    }
+
     .close-btn {
         position: absolute;
-        top: 20px;
-        left: 30px;
+        top: 15px;
+        right: 40px;
         font-size: 45px;
         background: none;
         border: none;
@@ -65,9 +88,9 @@ import { closeSidebar } from '@/js/sidebar';
 
                 a {
                     text-decoration: none;
-                    font-size: 40px;
+                    font-size: 50px;
                     font-family: "Inconsolata", monospace;
-                    font-weight: 200;
+                    font-weight: 300;
                     text-transform: uppercase;
                     cursor: pointer;
                     color: white;
