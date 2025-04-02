@@ -1,5 +1,5 @@
 <script setup>
-import { defineProps, ref, onMounted, onUnmounted } from 'vue';
+import { defineProps, ref, onMounted} from 'vue';
 import { Cloudinary } from '@cloudinary/url-gen';
 
 const props = defineProps({
@@ -26,53 +26,17 @@ const loadingStates = ref(props.photos.map(() => true));
 // Funzione per gestire il caricamento di una singola immagine
 const handleImageLoad = (index) => {
     loadingStates.value[index] = false;
-
-    // Controlla se tutte le immagini sono caricate
-    if (loadingStates.value.every((state) => !state)) {
-        // Forza un ricalcolo del layout
-        cardContainer.value.scrollLeft = cardContainer.value.scrollLeft;
-    }
 };
 
 //Variabile per il riferimento al contenitore delle cards
 const cardContainer = ref(null);
 
-// Funzione per gestire lo scroll orizzontale con la rotella del mouse
-const handleWheel = (e) => {
-    if (e.deltaMode === 0 && Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-        e.preventDefault();
-
-        // Calcola un fattore di accelerazione dinamico basato sulla velocità dello scroll
-        const accelerationFactor = Math.min(Math.abs(e.deltaY) / 10, 5); // Limita l'accelerazione a un massimo di 5
-        const scrollAmount = e.deltaY * accelerationFactor;
-
-        cardContainer.value.scrollLeft += scrollAmount;
-    }
-};
-
-//Funzione per resettare lo scroll all'inizio
-const resetScrollPosition = () => {
-    if(cardContainer.value) {
-        cardContainer.value.scrollLeft = 0;
-    } 
-};
-
 onMounted(() => {
     if (cardContainer.value) {
-        // Aggiungi il listener per la rotella del mouse
-        cardContainer.value.addEventListener('wheel', handleWheel, { passive: false });
-
-        //Resetta lo scroll all'inizio
-        resetScrollPosition();
+        cardContainer.value.scrollTop = 0;
     }
 });
 
-onUnmounted(() => {
-    if (cardContainer.value) {
-        // Rimuovi il listener per la rotella del mouse
-        cardContainer.value.removeEventListener('wheel', handleWheel);
-    }
-});
 </script>
 
 <template>
@@ -89,56 +53,27 @@ onUnmounted(() => {
 </template>
 
 <style scoped lang="scss">
-.outer-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-    overflow: hidden;
-}
 
 .card-container {
     display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scroll-behavior: smooth;
-    scrollbar-width: thin; // For Firefox
-    scrollbar-color: #BFA252 #e1e1e13b; // For Firefox
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    max-height: 80vh;
+    overflow-y: auto;
 }
 
-// For Webkit browsers (Chrome, Safari)
-.card-container::-webkit-scrollbar {
-    height: 8px;
-}
-
-.card-container::-webkit-scrollbar-track {
-    background: #f6f5f5;
-}
-
-.card-container::-webkit-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 10px;
-    border: 2px solid #e0e0e0;
-}
-
-.card-container::-webkit-scrollbar-thumb:hover {
-    background-color: #555; // Colore della scrollbar quando il cursore è sopra
-}
 
 .card {
-    flex: 0 0 auto;
     width: 60%;
-    margin-right: 2px;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-    position: relative;
+    margin-bottom: 30px;
 }
 
 .card img {
+    object-fit: contain;
     width: 100%;
-    height: auto;
-    display: block;
+    height: 100%;
 }
 
 .loading-indicator {
@@ -166,45 +101,22 @@ onUnmounted(() => {
 }
 
 @media (max-width: 1050px) {
-
-    .outer-container {
-        height: auto;
-    }
-
-    .card {
-        width: 100%; 
-        margin-right: 3px; 
-    }
-
-    .card-container {
-        -webkit-overflow-scrolling: touch; 
-    }
     .loading-indicator {
         top: 50%;
         left: 45%;
+    }
+
+    .card-container {
+        max-height: 80vh;
     }
 }
 
 
 @media (max-width: 1368px) and (orientation: landscape) {
-    .outer-container {
-        height: 100vh; /* Imposta l'altezza per occupare l'intera viewport */
-    }
 
     .card-container {
         height: 100vh; /* Imposta l'altezza per occupare l'intera viewport */
-    }
-
-    .card {
-        width: 100vw; /* Imposta la larghezza per occupare l'intera viewport */
-        height: 100vh; /* Imposta l'altezza per occupare l'intera viewport */ 
-    }
-
-    .card img {
-        object-fit: cover; /* Assicura che l'immagine riempia completamente il contenitore */
-        width: 100%;
-        height: 100%;
-        object-position: center;
+        max-height: 80vh;
     }
 
     .loading-indicator {
