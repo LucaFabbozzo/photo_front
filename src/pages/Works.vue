@@ -10,7 +10,7 @@ const cld = new Cloudinary({
 });
 
 
-const img1 = cld.image('RoLu/slide_works/works_slide_1');
+const img1 = cld.image('nicole_alessandro-0416_crfz4a');
 const img2 = cld.image('RoLu/slide_works/works_slide_2');
 const img3 = cld.image('RoLu/slide_works/works_slide_barbara_mattia');
 
@@ -22,7 +22,7 @@ import img3 from '@/assets/photos/slide_works/slide_works_3.jpg'; */
 
     // Creo un'array di oggetti per la slide
 const slides = [
-{ class: 'img_1', src: img1, link: 'works/1', name: 'Michela & Michele'},
+{ class: 'img_1', src: img1, link: 'works/1', name: 'Nicole & Alessandro'},
 { class: 'img_2', src: img2, link: 'works/2', name: 'Elena & Andrea'},
 { class: 'img_3', src: img3, link: 'works/3', name: 'Barbara & Mattia'},
 ];
