@@ -57,6 +57,7 @@
                 height: 100vh;
                 object-fit: cover;
                 object-position: center;
+                animation: zoomIn 15s infinite alternate;
             }
         }
     }
@@ -88,6 +89,15 @@
 
         to {
             opacity: 1
+        }
+    }
+
+    @keyframes zoomIn {
+        from {
+            transform: scale(1); // Dimensione attuale
+        }
+        to {
+            transform: scale(1.1); // Leggero ingrandimento
         }
     }
 }
