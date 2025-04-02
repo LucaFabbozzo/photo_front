@@ -108,7 +108,7 @@ onMounted(() => {
     }
 
     .card-container {
-        max-height: 80vh;
+        max-height: 75vh;
         .card {
             width: 90%;
             margin-bottom: 5px;
@@ -118,10 +118,8 @@ onMounted(() => {
 
 
 @media (max-width: 1368px) and (orientation: landscape) {
-
     .card-container {
-        height: 100vh; /* Imposta l'altezza per occupare l'intera viewport */
-        max-height: 80vh;
+        max-height: 100vh;
     }
 
     .loading-indicator {
