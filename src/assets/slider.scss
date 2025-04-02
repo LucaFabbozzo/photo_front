@@ -133,13 +133,26 @@
 
 
 
+// Adjust styles for smaller portrait screens
 @media (max-width: 1000px) and (orientation: portrait) {  
+    .slider {
+        .slide {
+            .slides {
+                .box {
+                    a {
+                        font-size: 17px; // Adjusted for better readability
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
     .site-title {
         top: 1%;
         left: 1%;
         width: 191px;
         font-size: 1.8rem;
-        border: none; // Bordo bianco trasparente
+        border: none; // No border applied
         color: #000000;
         .site-title2 {
             font-size: 0.6rem;
