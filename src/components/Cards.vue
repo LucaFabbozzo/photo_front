@@ -80,20 +80,16 @@ onMounted(() => {
 }
 
 
-.card {
-    margin-bottom: 15px;
-}
 
 
 .large-card {
     grid-column: span 2; /* Occupa entrambe le colonne */
     width: 100%;
-    height: 650px; /* Altezza maggiore per le immagini grandi */
+    height: 800px; /* Altezza maggiore per le immagini grandi */
 }
 
 .small-card {
-    width: 100%;
-    height: 400px; /* Altezza minore per le immagini piccole */
+    height: 100%; /* Altezza minore per le immagini piccole */
 }
 
 .card img {
