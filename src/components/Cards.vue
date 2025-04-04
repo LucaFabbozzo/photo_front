@@ -80,8 +80,6 @@ onMounted(() => {
 }
 
 
-
-
 .large-card {
     grid-column: span 2; /* Occupa entrambe le colonne */
     width: 100%;
