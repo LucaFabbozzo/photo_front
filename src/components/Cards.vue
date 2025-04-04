@@ -15,9 +15,9 @@ const cld = new Cloudinary({
     },
 });
 
-// Genera le URL delle immagini
-const generateImageUrl = (photo) => {
-    return cld.image(photo).toURL();
+// Genera le URL delle immagini usando il campo "name"
+const generateImageUrl = (photoName) => {
+    return cld.image(photoName).toURL();
 };
 
 // Stato di caricamento per ogni immagine
@@ -42,10 +42,15 @@ onMounted(() => {
 <template>
     <div class="outer-container">
         <div class="card-container" ref="cardContainer">
-            <div class="card" v-for="(photo, index) in photos" :key="index">
+            <div    
+                class="card" 
+                 v-for="(photo, index) in photos" 
+                 :key="index.id"
+                 :class="{'large-card': index % 3 === 0, 'small-card': index % 3 !== 0}">
+
                 <!-- Mostra il loading-indicator se l'immagine non è ancora caricata -->
                 <div v-if="loadingStates[index]" class="loading-indicator"></div>
-                <img :src="generateImageUrl(photo)" alt="Photo" draggable="false" @contextmenu.prevent
+                <img :src="generateImageUrl(photo.name)" alt="Photo" draggable="false" @contextmenu.prevent
                     @load="() => handleImageLoad(index)">
             </div>
         </div>
@@ -53,22 +58,42 @@ onMounted(() => {
 </template>
 
 <style scoped lang="scss">
+.outer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
 
 .card-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    flex-direction: repeat(2, 1fr); /* Due colonne */
+    gap: 15px; 
+    width: 100%;
+    height: 100%;
     overflow-y: auto;
     scroll-snap-type: y mandatory;
     scrollbar-width: thin;
     max-height: 75vh;
-    overflow-y: auto;
 }
 
 
 .card {
-    width: 60%;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+
+.large-card {
+    grid-column: span 2; /* Occupa entrambe le colonne */
+    width: 100%;
+    height: 650px; /* Altezza maggiore per le immagini grandi */
+}
+
+.small-card {
+    width: 100%;
+    height: 400px; /* Altezza minore per le immagini piccole */
 }
 
 .card img {
@@ -109,10 +134,6 @@ onMounted(() => {
 
     .card-container {
         max-height: 75vh;
-        .card {
-            width: 90%;
-            margin-bottom: 5px;
-        }
     }
 }
 
