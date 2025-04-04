@@ -70,7 +70,7 @@ onMounted(() => {
 .card-container {
     display: grid;
     flex-direction: repeat(2, 1fr); /* Due colonne */
-    gap: 15px; 
+    gap: 10px; 
     width: 100%;
     height: 100%;
     overflow-y: auto;
@@ -127,13 +127,21 @@ onMounted(() => {
 }
 
 @media (max-width: 1050px) {
-    .loading-indicator {
-        top: 50%;
-        left: 45%;
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        max-height: 100vh;
     }
 
-    .card-container {
-        max-height: 75vh;
+    .card {
+        width: 100%;
+        height: 400px; /* Tutte le immagini avranno la stessa altezza */
+    }
+
+    .large-card, .small-card {
+        grid-column: span 1; /* Rimuove la distinzione tra large e small */
+        width: 100%;
+        height: 400px; /* Altezza uniforme per tutte le immagini */
     }
 }
 
@@ -141,6 +149,11 @@ onMounted(() => {
 @media (max-width: 1368px) and (orientation: landscape) {
     .card-container {
         max-height: 100vh;
+    }
+
+    .card img {
+        width: 100vw; /* Larghezza massima della viewport */
+        height: auto; /* Mantiene le proporzioni */
     }
 
     .loading-indicator {

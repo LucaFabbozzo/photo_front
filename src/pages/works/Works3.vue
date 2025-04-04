@@ -17,4 +17,10 @@ const work3Title = photos.work3.title;
 
 <style scoped lang="scss">
     @use '../../assets/works.scss';
+
+    @media (max-width: 1050px) {
+    footer {
+        display: none;
+    }
+}
 </style>
