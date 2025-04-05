@@ -22,7 +22,7 @@
 <template>
     <div v-if="route.name === 'home'" class="site-title">
        <p>LagoLux</p>
-       <p class="site-title2">artful + events + wedding photography</p>
+       <!--<p class="site-title2">artful + events + wedding photography</p>-->
     </div>
 
     <section class="slider">

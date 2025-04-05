@@ -9,10 +9,8 @@ const work3Title = photos.work3.title;
 
 <template>
     <div class="container-works">
-        <h2>{{ work3Title }}</h2>
         <Cards :photos="work3Photos"/>
     </div>
-    <Footer />
 </template>
 
 <style scoped lang="scss">

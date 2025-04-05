@@ -64,30 +64,28 @@ onMounted(() => {
     align-items: center;
     width: 100%;
     height: 100%;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: thin;
 }
-
 
 .card-container {
     display: grid;
     flex-direction: repeat(2, 1fr); /* Due colonne */
     gap: 10px; 
-    width: 100%;
-    height: 100%;
-    overflow-y: auto;
-    scroll-snap-type: y mandatory;
-    scrollbar-width: thin;
-    max-height: 75vh;
+    width: 85%;
+    max-height: 100vh;
 }
 
 
 .large-card {
     grid-column: span 2; /* Occupa entrambe le colonne */
     width: 100%;
-    height: 800px; /* Altezza maggiore per le immagini grandi */
+    height: 600px; /* Altezza maggiore per le immagini grandi */
 }
 
 .small-card {
-    height: 100%; /* Altezza minore per le immagini piccole */
+    width: 100%;
 }
 
 .card img {
@@ -141,15 +139,6 @@ onMounted(() => {
 
 
 @media (max-width: 1368px) and (orientation: landscape) {
-    .card-container {
-        max-height: 100vh;
-    }
-
-    .card img {
-        width: 100vw; /* Larghezza massima della viewport */
-        height: auto; /* Mantiene le proporzioni */
-    }
-
     .loading-indicator {
         top: 50%;
         left: 50%;

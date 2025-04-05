@@ -17,7 +17,7 @@
     cursor: pointer;
     position: absolute;
     top: 20px;
-    right: 45px;
+    right: 40px;
     z-index: 1;
     transition: transform 0.3s ease, color 0.3s ease;
 }
