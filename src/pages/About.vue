@@ -28,56 +28,6 @@ import Footer from '@/components/Footer.vue';
     <Footer />
 </template>
 
-<style scoped>
-.about-container {
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 100vh;
-}
-
-.about-section, .team-section, .contact-section {
-    margin-bottom: 40px;
-}
-
-h1, h2 {
-    color: #333;
-}
-
-p {
-    color: #666;
-    line-height: 1.6;
-}
-
-.team-member {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.team-member img {
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    margin-right: 20px;
-}
-
-.team-member h3 {
-    margin: 0;
-    color: #333;
-}
-
-.team-member p {
-    margin: 0;
-    color: #666;
-}
-
-@media (orientation: landscape) {
-    .about-container{
-        max-width: 555px;
-    }
-}
+<style scoped lang="scss">
+@use "@/assets/about.scss";
 </style>
