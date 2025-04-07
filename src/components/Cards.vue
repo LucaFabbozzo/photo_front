@@ -31,10 +31,45 @@ const handleImageLoad = (index) => {
 //Variabile per il riferimento al contenitore delle cards
 const cardContainer = ref(null);
 
+// Array per tenere traccia di quali card hanno l'effetto shimmer
+const shimmerVisibleStates = ref(props.photos.map(() => false));
+
+// Riferimenti agli elementi card
+const cardRefs = ref([]);
+
 onMounted(() => {
     if (cardContainer.value) {
         cardContainer.value.scrollTop = 0;
     }
+
+     // Configura l'Intersection Observer
+     const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // Trova l'indice della card
+            const index = cardRefs.value.findIndex(el => el === entry.target);
+            if (index === -1) return;
+            
+            // Se la card è nel viewport e sta entrando dal basso
+            if (entry.isIntersecting && entry.boundingClientRect.top > 0) {
+                // Attiva l'effetto shimmer
+                shimmerVisibleStates.value[index] = true;
+                
+                // Disattiva l'effetto dopo l'animazione
+                setTimeout(() => {
+                    shimmerVisibleStates.value[index] = false;
+                }, 1000); // La durata dell'animazione shimmer
+            }
+        });
+    }, {
+        root: null, // viewport
+        rootMargin: '0px',
+        threshold: 0.4 // Attiva quando almeno il 10% della card è visibile
+    });
+    
+    // Osserva tutte le card
+    cardRefs.value.forEach(card => {
+        if (card) observer.observe(card);
+    });
 });
 
 </script>
@@ -46,7 +81,12 @@ onMounted(() => {
                 class="card" 
                  v-for="(photo, index) in photos" 
                  :key="index.id"
-                 :class="{'large-card': index % 3 === 0, 'small-card': index % 3 !== 0}">
+                 :class="{
+                    'large-card': index % 3 === 0, 
+                    'small-card': index % 3 !== 0, 
+                    'shimmer-visible': shimmerVisibleStates[index]
+                    }"
+                    :ref="el => { cardRefs[index] = el }">
 
                 <!-- Mostra il loading-indicator se l'immagine non è ancora caricata -->
                 <div v-if="loadingStates[index]" class="loading-indicator"></div>
