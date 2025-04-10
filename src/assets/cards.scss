@@ -109,7 +109,14 @@
             display: grid;
             grid-template-columns: repeat(1, 1fr); /* Due colonne */
             width: 100%;
-    
+            gap: 0;
+            max-height: 90vh;
+            .card {
+                img {
+                    object-fit: cover;
+                }
+            }
+
             .large-card, .small-card {
                 grid-column: span 1; /* Rimuove la distinzione tra large e small */
                 width: 100%;
