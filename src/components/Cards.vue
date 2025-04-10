@@ -63,7 +63,7 @@ onMounted(() => {
     }, {
         root: null, // viewport
         rootMargin: '0px',
-        threshold: 0.4 // Attiva quando almeno il 10% della card è visibile
+        threshold: 0.4
     });
     
     // Osserva tutte le card
