@@ -4,7 +4,6 @@ import Cards from '@/components/Cards.vue';
 import photos from '@/assets/photos/photos.json';
 
 const work2Photos = photos.work2.photos;
-const work2Title = photos.work2.title;
 </script>
 
 <template>
