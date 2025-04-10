@@ -36,7 +36,13 @@ const routes = [
       name: 'work2', // Nome per la rotta Work 2
       component: () => import('./pages/works/Works2.vue'), 
       meta: { title: 'Work 2 - Lagoluxphoto' } 
-  }
+  },
+  { 
+    path: '/works/3', 
+    name: 'work3', // Nome per la rotta Work 2
+    component: () => import('./pages/works/Works3.vue'), 
+    meta: { title: 'Work 3 - Lagoluxphoto' } 
+}
 ];
 
 const router = createRouter({
