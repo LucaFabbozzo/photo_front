@@ -63,7 +63,7 @@ onMounted(() => {
     }, {
         root: null, // viewport
         rootMargin: '0px',
-        threshold: 0.4
+        threshold: 0.1
     });
     
     // Osserva tutte le card
