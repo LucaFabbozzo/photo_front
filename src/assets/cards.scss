@@ -15,7 +15,7 @@
             grid-template-columns: repeat(2, 1fr); /* Due colonne */
             gap: 10px; 
             width: 85%;
-            max-height: 100vh;
+            max-height: 95vh;
             .card {
                 position: relative; /* Necessario per l'effetto overlay */
                 overflow: hidden; /* Contiene l'effetto brillantezza */
@@ -106,7 +106,9 @@
 
 @media (max-width: 1368px) and (orientation: landscape) {
     .loading-indicator {
+        position: fixed;
         top: 50%;
         left: 50%;
-    }
+        transform: translate(-50%, -50%);
+        }
 }
