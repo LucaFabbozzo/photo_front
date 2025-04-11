@@ -89,7 +89,7 @@ onMounted(() => {
                     :ref="el => { cardRefs[index] = el }">
 
                 <!-- Mostra il loading-indicator se l'immagine non è ancora caricata -->
-                <div v-if="loadingStates[index]" class="loading-indicator"></div>
+                <!--<div v-if="loadingStates[index]" class="loading-indicator"></div>-->
                 <img :src="generateImageUrl(photo.name)" alt="Photo" draggable="false" @contextmenu.prevent
                     @load="() => handleImageLoad(index)">
             </div>

@@ -81,14 +81,14 @@
 
 
 
-@media (max-width: 900px) {
+@media (max-width: 500px) {
     .outer-container {
         .card-container {
             display: grid;
             grid-template-columns: repeat(1, 1fr); /* Due colonne */
             width: 100%;
             gap: 0;
-            max-height: 85vh;
+            max-height: 87vh;
             .card {
                 img {
                     object-fit: cover;
