@@ -8,6 +8,7 @@
     overflow: hidden;
 
     .slide {
+        //min-height: 75vh;
         .slides {
             .box {
                 display: none;
@@ -21,7 +22,7 @@
                 a {
                     text-align: center;
                     position: absolute;
-                    top: 50%;
+                    top: 45%;
                     left: 50%;
                     transform: translate(-50%, -50%);
                     text-decoration: none;
@@ -53,10 +54,9 @@
             }
 
             img {
-                width: 100vw;
                 height: 100vh;
+                width: 100vw;
                 object-fit: cover;
-                object-position: center;
                 animation: zoomIn 15s infinite alternate;
             }
         }
@@ -64,8 +64,8 @@
 
     button {
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 45%;
+        transform: translateY(-45%);
         font-size: 1.5rem;
         background-color: hsla(0, 0%, 0%, 0.049);
         color: white;
