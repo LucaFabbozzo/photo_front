@@ -57,7 +57,7 @@ onMounted(() => {
                 // Disattiva l'effetto dopo l'animazione
                 setTimeout(() => {
                     shimmerVisibleStates.value[index] = false;
-                }, 1000); // La durata dell'animazione shimmer
+                }, 900); // La durata dell'animazione shimmer
             }
         });
     }, {
