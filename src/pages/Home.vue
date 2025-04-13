@@ -13,7 +13,7 @@ const cld = new Cloudinary({
 //const img1 = cld.image('home_slide-1_ncqpp0');
 //const img2 = cld.image('home_slide-2_rxzckq');
 const img3 = cld.image('home_slide-3_eatg0b');
-//const img4 = cld.image('home_slide-4_zgzn3w');
+const img4 = cld.image('works_slide-0408_arhyvk');
 //const img5 = cld.image('home_slide-5_j4ze3i');
 const img6 = cld.image('home_slide-6_ophugy');
 //const img7 = cld.image('home_slide-7_gua52r');
@@ -28,7 +28,7 @@ const slides = [
   //{ class: 'img_1', src: img1 },
   //{ class: 'img_2', src: img2 },
   { class: 'img_3', src: img3 },
-  //{ class: 'img_4', src: img4 },
+  { class: 'img_4', src: img4 },
   //{ class: 'img_5', src: img5 },
   { class: 'img_6', src: img6 }
   //{ class: 'img_7', src: img7 },
