@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Underline:ital,wght@0,100..900;1,100..900&display=swap");
 
+.site-title {
+    position: fixed;
+    top: 4%;
+    left: 2%;
+    font-family: "Montserrat Underline", sans-serif;
+    font-weight: 500;
+    z-index: 500;
+    font-size: 2.5rem;
+    color: #030303;
+}
 
 .slider {
     position: relative;
@@ -103,36 +113,6 @@
 }
 
 
-.site-title {
-    position: fixed;
-    top: 1%;
-    left: 1%;
-    font-family: "Montserrat Underline", sans-serif;
-    font-weight: 200;
-    z-index: 500;
-    font-size: 3rem;
-    text-align: center;
-    color: #030303;
-    
-    /* Cornice migliorata */
-    width: 260px;
-    padding: 12px 25px;
-    padding-top: 0px;
-    border: 1px solid #000000;
-    background-color: rgba(255, 255, 255, 0.75);
-    border-radius: 5px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-    letter-spacing: 1px;
-    
-    .site-title2 {
-        font-family: 'Dancing Script';
-        font-size: 0.8rem;
-        margin-top: 1px;
-        color: #2e7730;
-        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    }
-}
 
 // Adjust styles for smaller portrait screens
 @media (max-width: 1000px) and (orientation: portrait) {  
@@ -149,17 +129,7 @@
         }
     }
     .site-title {
-        top: 1%;
-        left: 1%;
-        width: 191px;
-        font-size: 1.8rem;
-        color: #000000;
-        background-color: rgba(255, 255, 255, 0.85);
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-        .site-title2 {
-            font-size: 0.5rem;
-            color: #000000;
-        }
+        font-size: 1.5rem;
     }
     img {
         width: 100vw;
@@ -174,20 +144,6 @@
         height: 100vh;
     }
     .site-title {
-        top: 1%;
-        left: 1%;
-        width: 191px;
-        font-size: 1.8rem;
-        border: 2px solid #030303;
-        border-radius: 6px;
-        color: #000000;
-        background-color: rgba(191, 162, 82, 0.9);
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-        
-        .site-title2 {
-            font-size: 0.7rem;
-            color: #000000;
-            text-shadow: none;
-        }
+        font-size: 1.5rem;
     }
 }
