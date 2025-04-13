@@ -21,7 +21,7 @@
 
 <template>
     <div v-if="route.name === 'home'" class="site-title">
-       <p>LagoLuxPhoto</p>
+       <p>lagoluxphoto</p>
        <!--<p class="site-title2">artful + events + wedding photography</p>-->
     </div>
 
