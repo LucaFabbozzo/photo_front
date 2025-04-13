@@ -57,13 +57,13 @@ onMounted(() => {
                 // Disattiva l'effetto dopo l'animazione
                 setTimeout(() => {
                     shimmerVisibleStates.value[index] = false;
-                }, 900); // La durata dell'animazione shimmer
+                }, 1500); // La durata dell'animazione shimmer
             }
         });
     }, {
         root: null, // viewport
         rootMargin: '0px',
-        threshold: 0.1
+        threshold: 0
     });
     
     // Osserva tutte le card
