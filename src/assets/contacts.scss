@@ -70,6 +70,14 @@ form {
     }
 }
 
+.success-message {
+    color: #2cae27;
+    margin-top: 15px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+}
+
 @media (max-width: 600px) {
     body {
         justify-content: center;

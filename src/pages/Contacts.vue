@@ -1,5 +1,5 @@
 <script setup>
-import { reactive } from 'vue';
+import { reactive, ref } from 'vue';
 import Footer from '@/components/Footer.vue';
 import emailjs from 'emailjs-com';
 import { Cloudinary } from '@cloudinary/url-gen';
@@ -27,6 +27,9 @@ const errors = reactive({
     email: '',
     message: ''
 });
+
+//Messaggio di successo
+const successMessage = ref('');
 
 
 // Funzione per validare i dati del form
@@ -82,10 +85,15 @@ const sendEmail = (e) => {
         import.meta.env.VITE_EMAILJS_USER_ID)
         .then((result) => {
             console.log(result.text);
-            alert('Email sent successfully!');
+            successMessage.value = 'Email sent successfully! 😊';
             formData.name = '';
             formData.email = '';
             formData.message = '';
+
+            //Nascondi il messaggio dopo 5 secondi
+            setTimeout(() => {
+                successMessage.value = '';
+            }, 5000);
         }, (error) => {
             console.log(error.text);
             alert('Error sending email.');
@@ -118,6 +126,9 @@ const sendEmail = (e) => {
 
                 <input type="submit" value="Send">
             </form>
+
+            <!-- Messaggio di successo -->
+            <p v-if="successMessage" class="success-message">{{ successMessage }}</p>
         </section>
         <Footer />
     </div>
