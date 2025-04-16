@@ -15,6 +15,7 @@ const img2 = cld.image('home_slide-1098_qhsot5');
 const img3 = cld.image('home_slide-6353_spe7kq');
 const img4 = cld.image('home_slide-3_gwwmjq');
 const img5 = cld.image('home_slide-5_igght7');
+const img6 = cld.image('home_slide-4239_ip7h9s');
 
 // Creo un'array di oggetti per la slide
 const slides = [
@@ -22,7 +23,8 @@ const slides = [
   { class: 'img_2', src: img2 },
   { class: 'img_3', src: img3 },
   { class: 'img_4', src: img4 },
-  { class: 'img_5', src: img5 }
+  { class: 'img_5', src: img5 },
+  { class: 'img_6', src: img6 }
 ];
 </script>
 
