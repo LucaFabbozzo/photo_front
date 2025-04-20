@@ -10,11 +10,12 @@ const cld = new Cloudinary({
 });
 
 
-const img1 = cld.image('home_slide-7_h1ohd0');
+const img1 = cld.image('home_slide-7_rfpm0p');
 const img2 = cld.image('RoLu/slide_works/works_slide_2');
 const img3 = cld.image('works_slide-5112_uebsq9');
 const img4 = cld.image('menu_mrzyvq');
 const img5 = cld.image('works_slide-0408_arhyvk');
+const img6 = cld.image('works_slide-2900_m4excy');
 
 /* 
     // Importa le immagini
@@ -29,6 +30,7 @@ const slides = [
 { class: 'img_3', src: img3, link: 'works/3', name: 'Three'},
 { class: 'img_4', src: img4, link: 'works/4', name: 'Four'},
 { class: 'img_5', src: img5, link: 'works/5', name: 'Five'},
+{ class: 'img_6', src: img6, link: 'works/6', name: 'Six'},
 ];
 </script>
 

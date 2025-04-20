@@ -54,6 +54,12 @@ const routes = [
         name: 'work5', // Nome per la rotta Work 2
         component: () => import('./pages/works/Works5.vue'),
         meta: { title: 'Work 5 - Lagoluxphoto' }
+    },
+    {
+        path: '/works/6',
+        name: 'work6', // Nome per la rotta Work 2
+        component: () => import('./pages/works/Works6.vue'),
+        meta: { title: 'Work 6 - Lagoluxphoto' }
     }
 ];
 
