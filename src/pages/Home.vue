@@ -15,7 +15,7 @@ const img2 = cld.image('home_slide-1098_qhsot5');
 const img3 = cld.image('home_slide-6353_spe7kq');
 const img4 = cld.image('home_slide-3_gwwmjq');
 const img5 = cld.image('home_slide-5_igght7');
-const img6 = cld.image('home_slide-4239_ip7h9s');
+const img6 = cld.image('home_slide-3930_xj5if3');
 
 // Creo un'array di oggetti per la slide
 const slides = [

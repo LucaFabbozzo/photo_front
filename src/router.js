@@ -27,39 +27,45 @@ const routes = [
     },
     {
         path: '/works/1',
-        name: 'work1', // Nome per la rotta Work 1
+        name: 'work1', 
         component: () => import('./pages/works/Works1.vue'),
         meta: { title: 'Work 1 - Lagoluxphoto' }
     },
     {
         path: '/works/2',
-        name: 'work2', // Nome per la rotta Work 2
+        name: 'work2', 
         component: () => import('./pages/works/Works2.vue'),
         meta: { title: 'Work 2 - Lagoluxphoto' }
     },
     {
         path: '/works/3',
-        name: 'work3', // Nome per la rotta Work 2
+        name: 'work3', 
         component: () => import('./pages/works/Works3.vue'),
         meta: { title: 'Work 3 - Lagoluxphoto' }
     },
     {
         path: '/works/4',
-        name: 'work4', // Nome per la rotta Work 2
+        name: 'work4', 
         component: () => import('./pages/works/Works4.vue'),
         meta: { title: 'Work 4 - Lagoluxphoto' }
     },
     {
         path: '/works/5',
-        name: 'work5', // Nome per la rotta Work 2
+        name: 'work5', 
         component: () => import('./pages/works/Works5.vue'),
         meta: { title: 'Work 5 - Lagoluxphoto' }
     },
     {
         path: '/works/6',
-        name: 'work6', // Nome per la rotta Work 2
+        name: 'work6', 
         component: () => import('./pages/works/Works6.vue'),
         meta: { title: 'Work 6 - Lagoluxphoto' }
+    },
+    {
+        path: '/works/7',
+        name: 'work7', 
+        component: () => import('./pages/works/Works7.vue'),
+        meta: { title: 'Work 7 - Lagoluxphoto' }
     }
 ];
 
