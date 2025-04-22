@@ -66,6 +66,12 @@ const routes = [
         name: 'work7', 
         component: () => import('./pages/works/Works7.vue'),
         meta: { title: 'Work 7 - Lagoluxphoto' }
+    },
+    {
+        path: '/works/8',
+        name: 'work8', 
+        component: () => import('./pages/works/Works8.vue'),
+        meta: { title: 'Work 8 - Lagoluxphoto' }
     }
 ];
 

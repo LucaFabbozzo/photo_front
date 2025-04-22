@@ -164,21 +164,42 @@
     "work7": {
         "title": "Seven",
         "photos": [
-            { "id": 135, "name": "denise_massimiliano_01_fqf7sl" },
-            { "id": 136, "name": "denise_massimiliano_02_rvqjwe" },
-            { "id": 137, "name": "denise_massimiliano_03_llxymy" },
-            { "id": 138, "name": "denise_massimiliano_04_jeyufu" },
-            { "id": 139, "name": "denise_massimiliano_05_cqjfaf" },
-            { "id": 140, "name": "denise_massimiliano_06_pn6tbs" },
-            { "id": 141, "name": "denise_massimiliano_07_qsyw14" },
-            { "id": 142, "name": "denise_massimiliano_08_qspco4" },
-            { "id": 143, "name": "denise_massimiliano_09_xfhjnb" },
-            { "id": 144, "name": "denise_massimiliano_10_gk617b" },
-            { "id": 145, "name": "denise_massimiliano_11_vg6fef" },
-            { "id": 146, "name": "denise_massimiliano_12_uyznhn" },
-            { "id": 147, "name": "denise_massimiliano_13_ldpneb" },
-            { "id": 148, "name": "denise_massimiliano_14_sni70b" },
-            { "id": 149, "name": "denise_massimiliano_15_dobshn" }
+            { "id": 135, "name": "denise_massimiliano_01_km0c6q" },
+            { "id": 136, "name": "denise_massimiliano_02_qnqfhk" },
+            { "id": 137, "name": "denise_massimiliano_03_lgsyq1" },
+            { "id": 138, "name": "denise_massimiliano_04_pg9vfq" },
+            { "id": 139, "name": "denise_massimiliano_05_atb7yu" },
+            { "id": 140, "name": "denise_massimiliano_06_c5cuim" },
+            { "id": 141, "name": "denise_massimiliano_07_imnfft" },
+            { "id": 142, "name": "denise_massimiliano_08_elmg3n" },
+            { "id": 143, "name": "denise_massimiliano_09_yol0dx" },
+            { "id": 144, "name": "denise_massimiliano_10_cvpoc6" },
+            { "id": 145, "name": "denise_massimiliano_11_lcsqs6" },
+            { "id": 146, "name": "denise_massimiliano_12_lptapr" },
+            { "id": 147, "name": "denise_massimiliano_13_d0anlu" },
+            { "id": 148, "name": "denise_massimiliano_14_yfm04l" },
+            { "id": 149, "name": "denise_massimiliano_15_ntnvxi" }
+        ]
+    },
+    "work8": {
+        "title": "Eight",
+        "photos": [
+            { "id": 150, "name": "stefania_gabriele_01_qvg00j" },
+            { "id": 151, "name": "stefania_gabriele_02_dwriyk" },
+            { "id": 152, "name": "stefania_gabriele_03_kgmyot" },
+            { "id": 153, "name": "stefania_gabriele_04_tfqpgt" },
+            { "id": 154, "name": "stefania_gabriele_05_rjuh8m" },
+            { "id": 155, "name": "stefania_gabriele_06_gjkia6" },
+            { "id": 156, "name": "stefania_gabriele_07_mymflh" },
+            { "id": 157, "name": "stefania_gabriele_08_ck92st" },
+            { "id": 158, "name": "stefania_gabriele_09_rgultc" },
+            { "id": 159, "name": "stefania_gabriele_10_ltqbov" },
+            { "id": 160, "name": "stefania_gabriele_11_l9mi8c" },
+            { "id": 161, "name": "stefania_gabriele_12_ishuf6" },
+            { "id": 162, "name": "stefania_gabriele_13_knowrn" },
+            { "id": 163, "name": "stefania_gabriele_14_ovbysh" },
+            { "id": 164, "name": "stefania_gabriele_15_grkeef" },
+            { "id": 165, "name": "stefania_gabriele_16_aewd7l" }
         ]
     }
 }
