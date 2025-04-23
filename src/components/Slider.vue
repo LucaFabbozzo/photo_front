@@ -20,10 +20,10 @@
 
 
 <template>
-    <div v-if="route.name === 'home'" class="site-title">
+    <!--<div v-if="route.name === 'home'" class="site-title">
        <p>lagoluxphoto</p>
-       <!--<p class="site-title2">artful + events + wedding photography</p>-->
-    </div>
+       <p class="site-title2">artful + events + wedding photography</p>
+    </div>-->
 
     <section class="slider">
         <div class="slide">
