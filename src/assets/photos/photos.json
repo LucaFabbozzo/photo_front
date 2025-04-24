@@ -215,5 +215,25 @@
             { "id": 173, "name": "isabelle_mohamed_08_wvdvk5" },
             { "id": 174, "name": "isabelle_mohamed_09_s9rtau" }
         ]
+    },
+    "work10": {
+        "title": "Ten",
+        "photos": [
+            { "id": 175, "name": "chiara_diego_01_rjuhcy" },
+            { "id": 176, "name": "chiara_diego_02_k2wpbn" },
+            { "id": 177, "name": "chiara_diego_03_is66r0" },
+            { "id": 178, "name": "chiara_diego_04_wwoeqh" },
+            { "id": 179, "name": "chiara_diego_05_p5hypi" },
+            { "id": 180, "name": "chiara_diego_06_ydgw7z" },
+            { "id": 181, "name": "chiara_diego_07_cy0na6" },
+            { "id": 182, "name": "chiara_diego_08_gaeshu" },
+            { "id": 183, "name": "chiara_diego_09_qodign" },
+            { "id": 184, "name": "chiara_diego_10_iyhrc7" },
+            { "id": 185, "name": "chiara_diego_11_bketne" },
+            { "id": 186, "name": "chiara_diego_12_xg0ogj" },
+            { "id": 187, "name": "chiara_diego_13_keqp6d" },
+            { "id": 188, "name": "chiara_diego_14_cwbzlo" },
+            { "id": 189, "name": "chiara_diego_15_xr34mn" }
+        ]
     }
 }

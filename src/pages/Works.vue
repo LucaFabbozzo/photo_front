@@ -19,6 +19,7 @@ const img6 = cld.image('works_slide-9062_nfooyi');
 const img7 = cld.image('works_slide-4239_quihet');
 const img8 = cld.image('works_slide-3633_hcet0x');
 const img9 = cld.image('works_slide-2045_fikq7l');
+const img10 = cld.image('works_slide-7544_e1ntof');
 
 /* 
     // Importa le immagini
@@ -37,6 +38,7 @@ const slides = [
 { class: 'img_7', src: img7, link: 'works/7', name: 'Seven'},
 { class: 'img_8', src: img8, link: 'works/8', name: 'Eight'},
 { class: 'img_9', src: img9, link: 'works/9', name: 'Nine'},
+{ class: 'img_10', src: img10, link: 'works/10', name: 'Ten'},
 ];
 </script>
 
