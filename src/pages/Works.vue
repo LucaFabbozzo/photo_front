@@ -11,14 +11,14 @@ const cld = new Cloudinary({
 
 
 const img1 = cld.image('home_slide-7_rfpm0p');
-const img2 = cld.image('RoLu/slide_works/works_slide_2');
+const img2 = cld.image('works_slide-0605_z1ghnh');
 const img3 = cld.image('works_slide-5237_zokvmg');
 const img4 = cld.image('works_slide-7729_wohidw');
-const img5 = cld.image('works_slide-0408_arhyvk');
+const img5 = cld.image('works_slide-0399_lthoje');
 const img6 = cld.image('works_slide-9062_nfooyi');
 const img7 = cld.image('works_slide-4239_quihet');
 const img8 = cld.image('works_slide-3633_hcet0x');
-const img9 = cld.image('works_slide-2045_fikq7l');
+const img9 = cld.image('works_slide-2113_srbpfy');
 const img10 = cld.image('works_slide-7544_e1ntof');
 
 /* 
