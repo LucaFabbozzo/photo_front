@@ -13,7 +13,7 @@ const cld = new Cloudinary({
 });
 
 //Ottengo l'immagine da Cloudinary
-const backgroundImg = cld.image('RoLu/slide_works/works_slide_2').toURL();
+const backgroundImg = cld.image('works_slide-0605_z1ghnh').toURL();
 
 // Dati del form e messaggi di errore
 const formData = reactive({
