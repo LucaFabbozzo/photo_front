@@ -11,7 +11,7 @@ const cld = new Cloudinary({
 })
 
 //Crea l'immagine Cloudinary
-const sidebarImage = cld.image('menu_mrzyvq');
+const sidebarImage = cld.image('home_slide-9064_mk8dvc');
 
 </script>
 
