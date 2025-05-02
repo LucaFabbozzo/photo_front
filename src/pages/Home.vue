@@ -51,7 +51,7 @@ const slides = [
 }
 
 .logo {
-    width: 200px; /* Regola la dimensione del logo */
+    width: 280px; /* Regola la dimensione del logo */
     height: auto;
 }
 </style>
