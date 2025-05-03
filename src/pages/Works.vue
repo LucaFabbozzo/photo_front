@@ -10,7 +10,7 @@ const cld = new Cloudinary({
 });
 
 
-const img1 = cld.image('home_slide-7_rfpm0p');
+const img1 = cld.image('works_slide-6746_mbtgah');
 const img2 = cld.image('works_slide-0605_z1ghnh');
 const img3 = cld.image('works_slide-5237_zokvmg');
 const img4 = cld.image('works_slide-7729_wohidw');
