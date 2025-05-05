@@ -45,13 +45,24 @@ const slides = [
 <style scoped>
 .logo-container {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 12px;
+    left: 15px;
     z-index: 1000;
 }
 
 .logo {
     width: 280px; /* Regola la dimensione del logo */
     height: auto;
+}
+
+
+@media (max-width: 768px) {
+  .logo-container {
+    top: 3%;
+  }
+
+  .logo {
+    width: 200px;
+  }
 }
 </style>
