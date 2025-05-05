@@ -92,6 +92,20 @@
     }
 }
 
+@media screen and (max-width: 1024px) {
+    .sidebar {
+        .sidebar-content {
+            ul {
+                li {
+                    a {
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 1024px) and (orientation: landscape) {
     .sidebar {
         .sidebar-content {

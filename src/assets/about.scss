@@ -3,7 +3,6 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    padding: 20px;
     background-color: #f5f5f5; /* Colore di sfondo neutro */
 }
 
@@ -61,6 +60,10 @@
 
 /* Stile responsivo */
 @media (max-width: 768px) {
+    .about-container {
+        max-height: 86vh;
+    }
+
     .book-layout {
         flex-direction: column; /* Disposizione verticale su schermi piccoli */
         aspect-ratio: unset;
