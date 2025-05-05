@@ -1,0 +1,1 @@
+/* empty css                                                               */import{_ as e,c as r,o as s,a as t}from"./index-CM5g8puL.js";const c={};function n(a,o){return s(),r("footer",null,o[0]||(o[0]=[t("div",{class:"icons"},null,-1)]))}const l=e(c,[["render",n],["__scopeId","data-v-2f60f728"]]);export{l as F};
