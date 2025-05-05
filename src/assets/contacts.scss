@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet');
 
 .contacts-container {
     background-image: url('{{backgroundImg}}');
@@ -14,6 +14,7 @@
 
 
 form {
+    font-family: "Manrope", sans-serif;
     display: flex;
     flex-direction: column;
     padding: 30px 70px 30px 221px;
@@ -48,6 +49,7 @@ form {
 
     input,
     textarea {
+        font-family: "Manrope", sans-serif;
         width: 400px;
         padding: 10px;
         border: 1px solid rgba(200, 200, 200, 0.7); // Change border color
@@ -71,6 +73,7 @@ form {
 }
 
 .success-message {
+    font-family: "Manrope", sans-serif;
     color: #2cae27;
     margin-top: 15px;
     font-size: 1.5rem;
