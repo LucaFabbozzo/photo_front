@@ -1,6 +1,7 @@
 <script setup>
   import Header from '@/components/Header.vue';
   import Sidebar from '@/components/Sidebar.vue';
+  import CookieBanner from '@/components/CookieBanner.vue';
   import '@/assets/global.scss'
 </script>
 
@@ -9,6 +10,7 @@
     <Header />
     <Sidebar />
     <router-view></router-view>
+    <CookieBanner />
   </div>
 </template>
 

@@ -77,3 +77,13 @@
         border-bottom: 1px solid #ddd;
     }
 }
+
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+    .book-layout {
+        flex-direction: column; /* Disposizione verticale su schermi piccoli */
+        width: 70%;
+        max-height: 300px;
+        overflow: scroll;
+    }
+}
